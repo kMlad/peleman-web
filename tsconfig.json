@@ -16,9 +16,23 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@components/*": ["./src/components/components/*"],
+      "@blocks/*": ["./src/components/blocks/*"],
+      "@layout/*": ["./src/components/layout/*"],
+      "@utilityComponents/*": ["./src/components/utilityComponents/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@pages/*": ["./src/pages/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.js",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/stripe-payment/stripe-payment.js",
+    "pages/api/form.js",
+    "pages/stripe-payment/index.js",
+    "pages/api/app.js"
+  ],
+  "exclude": ["node_modules", "jest.setup.js", "pages/test/test.tsx"]
 }

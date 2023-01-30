@@ -1,0 +1,7 @@
+overwrite: true
+# schema: 'https://layershift.solvio.it/graphql'
+schema: 'http://localhost:1337/graphql'
+generates:
+  ./src/utils/types.ts:
+    plugins:
+      - 'typescript'
