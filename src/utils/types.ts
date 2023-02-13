@@ -13,7 +13,7 @@ export type Scalars = {
   DateTime: any;
   I18NLocaleCode: any;
   JSON: any;
-  PageBlocksDynamicZoneInput: any;
+  PagePageBlocksDynamicZoneInput: any;
   Upload: any;
 };
 
@@ -41,10 +41,14 @@ export type BooleanFilterInput = {
   startsWith?: InputMaybe<Scalars['Boolean']>;
 };
 
-export type ComponentBlocksExample = {
-  __typename?: 'ComponentBlocksExample';
+export type ComponentBlocksContactForm = {
+  __typename?: 'ComponentBlocksContactForm';
+  button: Scalars['String'];
+  cta: Scalars['String'];
+  email: Scalars['String'];
   id: Scalars['ID'];
-  test?: Maybe<Scalars['String']>;
+  phoneNumber: Scalars['String'];
+  title: Scalars['String'];
 };
 
 export type ComponentUtilMeta = {
@@ -168,7 +172,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = ComponentBlocksExample | ComponentUtilMeta | ComponentUtilSeo | I18NLocale | Page | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = ComponentBlocksContactForm | ComponentUtilMeta | ComponentUtilSeo | I18NLocale | Page | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';
@@ -473,10 +477,10 @@ export type MutationUploadArgs = {
 
 export type Page = {
   __typename?: 'Page';
-  blocks?: Maybe<Array<Maybe<PageBlocksDynamicZone>>>;
   createdAt?: Maybe<Scalars['DateTime']>;
   locale?: Maybe<Scalars['String']>;
   localizations?: Maybe<PageRelationResponseCollection>;
+  pageBlocks?: Maybe<Array<Maybe<PagePageBlocksDynamicZone>>>;
   publishedAt?: Maybe<Scalars['DateTime']>;
   seo: ComponentUtilSeo;
   slug: Scalars['String'];
@@ -491,8 +495,6 @@ export type PageLocalizationsArgs = {
   publicationState?: InputMaybe<PublicationState>;
   sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
 };
-
-export type PageBlocksDynamicZone = ComponentBlocksExample | Error;
 
 export type PageEntity = {
   __typename?: 'PageEntity';
@@ -527,12 +529,14 @@ export type PageFiltersInput = {
 };
 
 export type PageInput = {
-  blocks?: InputMaybe<Array<Scalars['PageBlocksDynamicZoneInput']>>;
+  pageBlocks?: InputMaybe<Array<Scalars['PagePageBlocksDynamicZoneInput']>>;
   publishedAt?: InputMaybe<Scalars['DateTime']>;
   seo?: InputMaybe<ComponentUtilSeoInput>;
   slug?: InputMaybe<Scalars['String']>;
   title?: InputMaybe<Scalars['String']>;
 };
+
+export type PagePageBlocksDynamicZone = ComponentBlocksContactForm | Error;
 
 export type PageRelationResponseCollection = {
   __typename?: 'PageRelationResponseCollection';

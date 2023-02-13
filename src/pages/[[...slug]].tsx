@@ -1,8 +1,8 @@
 import client from "../utils/apollo-client";
 import { GET_ALL_PAGES, GET_ALL_BLOGS } from "../utils/queries";
 import { PageEntity, Query } from "../utils/types";
-// import Blocks from '@utilityComponents/Blocks';
-// import Layout from '@layout/Layout/Layout';
+import Blocks from "@utilityComponents/Blocks";
+import Layout from "@layout/Layout/Layout";
 import React, { useState } from "react";
 
 interface Params {
@@ -40,26 +40,26 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: Params) {
   let pageData: PageEntity[] | undefined;
 
-     try {
-      const res = (await client.query({
-        query: GET_ALL_PAGES,
-        fetchPolicy: "no-cache",
-      })) as ApiResponse;
+  try {
+    const res = (await client.query({
+      query: GET_ALL_PAGES,
+      fetchPolicy: "no-cache",
+    })) as ApiResponse;
 
-      pageData = res.data.pages?.data.filter(
-        (page) => page.attributes?.slug === params.slug[0]
-      );
-    } catch (e) {
-      console.log(e);
-      pageData = [];
-    }
+    pageData = res.data.pages?.data.filter(
+      (page) => page.attributes?.slug === params.slug[0]
+    );
+  } catch (e) {
+    console.log(e);
+    pageData = [];
+  }
 
-    return {
-      props: {
-        pageData,
-      },
-    };
-  } 
+  return {
+    props: {
+      pageData,
+    },
+  };
+}
 
 function Page({ pageData }: P) {
   const singlePageData = pageData[0];
@@ -67,13 +67,13 @@ function Page({ pageData }: P) {
 
   return (
     <>
-      {/* <Layout
+      <Layout
         setShowLoginWindow={setShowLoginWindow}
         showLoginWindow={showLoginWindow}
       >
-        <Blocks blogData={blogData} singlePageData={singlePageData} />
-      </Layout> */}
-      <div>{singlePageData.attributes?.title}</div>
+        {/* <div className="bg-orange">{singlePageData.attributes?.title}</div> */}
+        <Blocks singlePageData={singlePageData} />
+      </Layout>
     </>
   );
 }

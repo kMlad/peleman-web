@@ -1,4 +1,5 @@
 import { gql } from '@apollo/client';
+import ContactFormQuery from '@blocks/ContactFormBlock/query';
 
 
 export const GET_ALL_PAGES = gql`
@@ -24,7 +25,8 @@ export const GET_ALL_PAGES = gql`
             }
           }
           pageBlocks {
-            __typename            
+            __typename 
+            ${ContactFormQuery}           
           }
         }
       }
