@@ -1,5 +1,5 @@
 const LeftImageRightTextBlockQuery = `
-... on ComponentPageBlocksLeftImageRightText {
+... on ComponentBlocksLeftImageRightText {
     id
     title
     description

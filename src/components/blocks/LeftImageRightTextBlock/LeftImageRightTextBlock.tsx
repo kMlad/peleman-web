@@ -1,21 +1,22 @@
-import React from 'react';
-import Image from 'next/image';
-import placeholderImage from './assets/placeholder.png';
-import findMediaUrl from '@utils/findMediaUrl';
-import { ComponentPageBlocksLeftImageRightText } from '@utils/types';
+import React from "react";
+import Image from "next/image";
+import placeholderImage from "./assets/placeholder.png";
+import findMediaUrl from "@utils/findMediaUrl";
+import { ComponentBlocksLeftImageRightText } from "@utils/types";
+import ReactMarkdown from "react-markdown";
 
 function LeftImageRightTextBlock({
   title,
   description,
-  circledImage,
-}: ComponentPageBlocksLeftImageRightText): JSX.Element {
+  image,
+}: ComponentBlocksLeftImageRightText): JSX.Element {
   return (
     <>
       <div className="container mx-auto my-20 flex flex-col px-4 md:flex-row">
         <div className={`flex h-full w-full xl:w-[90%]`}>
           <Image
             alt="image"
-            src={findMediaUrl(circledImage) ?? placeholderImage.src}
+            src={findMediaUrl(image) ?? placeholderImage.src}
             height={316}
             width={316}
           />
@@ -25,7 +26,7 @@ function LeftImageRightTextBlock({
             {title}
           </h3>
           <div className=" w-full list-disc text-lg  font-thin leading-8 md:w-[90%]">
-            {description}
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         </div>
       </div>

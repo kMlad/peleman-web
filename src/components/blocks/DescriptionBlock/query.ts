@@ -1,7 +1,7 @@
 const DescriptionBlockQuery = `
-... on ComponentPageBlocksDescription{
+... on ComponentBlocksDescription{
   id
-  cta
+  description
   alignment
   fontSize
   __typename

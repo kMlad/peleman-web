@@ -2,12 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import imageBig from '../ImageBlock/assets/image.png';
 import {
-  ComponentPageBlocksImage,
-  UploadFileEntityResponse,
+  ComponentBlocksImage,
 } from '@utils/types';
 import findMediaUrl from '../../../utils/findMediaUrl';
 
-function ImageBlock({ image, desc }: ComponentPageBlocksImage): JSX.Element {
+function ImageBlock({ image, description }: ComponentBlocksImage): JSX.Element {
   return (
     <div className="container mx-auto">
       <div className="container">
@@ -19,7 +18,7 @@ function ImageBlock({ image, desc }: ComponentPageBlocksImage): JSX.Element {
           layout="responsive"
         />
       </div>
-      <div className=" container mt-2 text-sm text-darkGrey">{desc}</div>
+      <div className=" container mt-2 text-sm text-darkGrey">{description}</div>
     </div>
   );
 }

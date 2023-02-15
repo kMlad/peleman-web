@@ -41,6 +41,48 @@ export type BooleanFilterInput = {
   startsWith?: InputMaybe<Scalars['Boolean']>;
 };
 
+export type ComponentBlocksBenefits = {
+  __typename?: 'ComponentBlocksBenefits';
+  benefits?: Maybe<Array<Maybe<ComponentComponentsBenefit>>>;
+  id: Scalars['ID'];
+  title: Scalars['String'];
+};
+
+
+export type ComponentBlocksBenefitsBenefitsArgs = {
+  filters?: InputMaybe<ComponentComponentsBenefitFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type ComponentBlocksButtons = {
+  __typename?: 'ComponentBlocksButtons';
+  buttons: Array<Maybe<ComponentComponentsButton>>;
+  id: Scalars['ID'];
+};
+
+
+export type ComponentBlocksButtonsButtonsArgs = {
+  filters?: InputMaybe<ComponentComponentsButtonFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type ComponentBlocksCallToAction = {
+  __typename?: 'ComponentBlocksCallToAction';
+  buttons: Array<Maybe<ComponentComponentsButton>>;
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  title: Scalars['String'];
+};
+
+
+export type ComponentBlocksCallToActionButtonsArgs = {
+  filters?: InputMaybe<ComponentComponentsButtonFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
 export type ComponentBlocksContactForm = {
   __typename?: 'ComponentBlocksContactForm';
   button: Scalars['String'];
@@ -49,6 +91,155 @@ export type ComponentBlocksContactForm = {
   id: Scalars['ID'];
   phoneNumber: Scalars['String'];
   title: Scalars['String'];
+};
+
+export type ComponentBlocksDescription = {
+  __typename?: 'ComponentBlocksDescription';
+  alignment: Enum_Componentblocksdescription_Alignment;
+  description: Scalars['String'];
+  fontSize: Enum_Componentblocksdescription_Fontsize;
+  id: Scalars['ID'];
+};
+
+export type ComponentBlocksHero = {
+  __typename?: 'ComponentBlocksHero';
+  button?: Maybe<ComponentComponentsButton>;
+  description?: Maybe<Scalars['String']>;
+  heroImage: UploadFileEntityResponse;
+  id: Scalars['ID'];
+  size: Enum_Componentblockshero_Size;
+  smallTitle?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksImage = {
+  __typename?: 'ComponentBlocksImage';
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image: UploadFileEntityResponse;
+};
+
+export type ComponentBlocksImageWithTitle = {
+  __typename?: 'ComponentBlocksImageWithTitle';
+  id: Scalars['ID'];
+  image: UploadFileEntityResponse;
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksLeftImageAndText = {
+  __typename?: 'ComponentBlocksLeftImageAndText';
+  button?: Maybe<ComponentComponentsButton>;
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image: UploadFileEntityResponse;
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksLeftImageRightText = {
+  __typename?: 'ComponentBlocksLeftImageRightText';
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image: UploadFileEntityResponse;
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksLeftTitleRightDescription = {
+  __typename?: 'ComponentBlocksLeftTitleRightDescription';
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksMarquee = {
+  __typename?: 'ComponentBlocksMarquee';
+  id: Scalars['ID'];
+  logos: UploadFileRelationResponseCollection;
+  title: Scalars['String'];
+};
+
+
+export type ComponentBlocksMarqueeLogosArgs = {
+  filters?: InputMaybe<UploadFileFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type ComponentBlocksRightImageAndText = {
+  __typename?: 'ComponentBlocksRightImageAndText';
+  button?: Maybe<ComponentComponentsButton>;
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image: UploadFileEntityResponse;
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksSellingPoints = {
+  __typename?: 'ComponentBlocksSellingPoints';
+  benefits: Array<Maybe<ComponentComponentsBenefit>>;
+  id: Scalars['ID'];
+};
+
+
+export type ComponentBlocksSellingPointsBenefitsArgs = {
+  filters?: InputMaybe<ComponentComponentsBenefitFiltersInput>;
+  pagination?: InputMaybe<PaginationArg>;
+  sort?: InputMaybe<Array<InputMaybe<Scalars['String']>>>;
+};
+
+export type ComponentBlocksSpacing = {
+  __typename?: 'ComponentBlocksSpacing';
+  id: Scalars['ID'];
+  sizeHeight: Enum_Componentblocksspacing_Sizeheight;
+};
+
+export type ComponentBlocksTitle = {
+  __typename?: 'ComponentBlocksTitle';
+  alignment: Enum_Componentblockstitle_Alignment;
+  fontSize: Enum_Componentblockstitle_Fontsize;
+  id: Scalars['ID'];
+  title: Scalars['String'];
+};
+
+export type ComponentBlocksVideoHero = {
+  __typename?: 'ComponentBlocksVideoHero';
+  id: Scalars['ID'];
+  mobileVideo?: Maybe<UploadFileEntityResponse>;
+  video: UploadFileEntityResponse;
+};
+
+export type ComponentComponentsBenefit = {
+  __typename?: 'ComponentComponentsBenefit';
+  alignment?: Maybe<Enum_Componentcomponentsbenefit_Alignment>;
+  description: Scalars['String'];
+  id: Scalars['ID'];
+  image?: Maybe<UploadFileEntityResponse>;
+  title: Scalars['String'];
+};
+
+export type ComponentComponentsBenefitFiltersInput = {
+  alignment?: InputMaybe<StringFilterInput>;
+  and?: InputMaybe<Array<InputMaybe<ComponentComponentsBenefitFiltersInput>>>;
+  description?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<ComponentComponentsBenefitFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<ComponentComponentsBenefitFiltersInput>>>;
+  title?: InputMaybe<StringFilterInput>;
+};
+
+export type ComponentComponentsButton = {
+  __typename?: 'ComponentComponentsButton';
+  color: Enum_Componentcomponentsbutton_Color;
+  cta: Scalars['String'];
+  id: Scalars['ID'];
+  link: Scalars['String'];
+};
+
+export type ComponentComponentsButtonFiltersInput = {
+  and?: InputMaybe<Array<InputMaybe<ComponentComponentsButtonFiltersInput>>>;
+  color?: InputMaybe<StringFilterInput>;
+  cta?: InputMaybe<StringFilterInput>;
+  link?: InputMaybe<StringFilterInput>;
+  not?: InputMaybe<ComponentComponentsButtonFiltersInput>;
+  or?: InputMaybe<Array<InputMaybe<ComponentComponentsButtonFiltersInput>>>;
 };
 
 export type ComponentUtilMeta = {
@@ -130,6 +321,57 @@ export type DateTimeFilterInput = {
   startsWith?: InputMaybe<Scalars['DateTime']>;
 };
 
+export enum Enum_Componentblocksdescription_Alignment {
+  Center = 'center',
+  Left = 'left',
+  Right = 'right'
+}
+
+export enum Enum_Componentblocksdescription_Fontsize {
+  Large = 'Large',
+  Medium = 'Medium',
+  Small = 'Small'
+}
+
+export enum Enum_Componentblockshero_Size {
+  Large = 'large',
+  Small = 'small'
+}
+
+export enum Enum_Componentblocksspacing_Sizeheight {
+  L = 'l',
+  M = 'm',
+  S = 's',
+  Xl = 'xl',
+  Xs = 'xs',
+  Xxl = 'xxl',
+  Xxxl = 'xxxl'
+}
+
+export enum Enum_Componentblockstitle_Alignment {
+  Center = 'center',
+  Left = 'left',
+  Right = 'right'
+}
+
+export enum Enum_Componentblockstitle_Fontsize {
+  Big = 'Big',
+  Small = 'Small'
+}
+
+export enum Enum_Componentcomponentsbenefit_Alignment {
+  Center = 'center',
+  Left = 'left',
+  Right = 'right'
+}
+
+export enum Enum_Componentcomponentsbutton_Color {
+  Primary = 'primary',
+  Quaternary = 'quaternary',
+  Secondary = 'secondary',
+  Tertiary = 'tertiary'
+}
+
 export enum Enum_Componentutilmeta_Name {
   Author = 'author',
   Keywords = 'keywords',
@@ -172,7 +414,7 @@ export type FloatFilterInput = {
   startsWith?: InputMaybe<Scalars['Float']>;
 };
 
-export type GenericMorph = ComponentBlocksContactForm | ComponentUtilMeta | ComponentUtilSeo | I18NLocale | Page | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
+export type GenericMorph = ComponentBlocksBenefits | ComponentBlocksButtons | ComponentBlocksCallToAction | ComponentBlocksContactForm | ComponentBlocksDescription | ComponentBlocksHero | ComponentBlocksImage | ComponentBlocksImageWithTitle | ComponentBlocksLeftImageAndText | ComponentBlocksLeftImageRightText | ComponentBlocksLeftTitleRightDescription | ComponentBlocksMarquee | ComponentBlocksRightImageAndText | ComponentBlocksSellingPoints | ComponentBlocksSpacing | ComponentBlocksTitle | ComponentBlocksVideoHero | ComponentComponentsBenefit | ComponentComponentsButton | ComponentUtilMeta | ComponentUtilSeo | I18NLocale | Page | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser;
 
 export type I18NLocale = {
   __typename?: 'I18NLocale';

@@ -2,14 +2,14 @@
 import React from 'react';
 import Image from 'next/image';
 import itemImages from './assets/item.png';
-import { ComponentPageBlocksMarqee } from '@utils/types';
+import { ComponentBlocksMarquee } from '@utils/types';
 import findMediaUrl from '@utils/findMediaUrl';
 import Marquee from 'react-fast-marquee';
 
 function MarqueeBlock({
   title,
   logos,
-}: ComponentPageBlocksMarqee): JSX.Element {
+}: ComponentBlocksMarquee): JSX.Element {
   return (
     <>
       <div className="relative my-10 flex max-h-[273px] flex-col items-center overflow-x-hidden">
@@ -25,7 +25,6 @@ function MarqueeBlock({
                 src={findMediaUrl({ data: logoItem }) ?? itemImages.src}
                 height={logoItem.attributes?.height ?? 100}
                 width={logoItem.attributes?.width ?? 100}
-                layout="fixed"
                 unoptimized
               />
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-// import { ComponentPageBlocksCallToAction } from '@utils/types';
+import { ComponentBlocksCallToAction } from '@utils/types';
 import Button, { P as ButtonProps } from '@components/Button';
 import ReactMarkdown from 'react-markdown';
 
@@ -9,7 +9,7 @@ interface P {
   buttons: ButtonProps[];
 }
 
-function CallToActionBlock({ buttons, title, description }: P): JSX.Element {
+function CallToActionBlock({ buttons, title, description }: ComponentBlocksCallToAction): JSX.Element {
   return (
     <div className="h-full w-full bg-darkNavy sm:py-0">
       <div className="container mx-auto flex flex-col justify-between gap-y-5 py-14 sm:gap-y-0 md:flex-row">
@@ -22,9 +22,9 @@ function CallToActionBlock({ buttons, title, description }: P): JSX.Element {
           </div>
         </div>
         <div className=" flex basis-1/2 flex-col gap-2 md:items-end">
-          {buttons.map((item: ButtonProps, index: number) => (
+          {buttons.map((item, index: number) => (
             <div key={index}>
-              <Button cta={item.cta} link={item.link} color={'primary'} />
+              <Button cta={(item && item.cta) ?? ""} link={(item && item.link) ?? ""} color={'primary'} />
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 const CircledLeftImageBlockQuery = `
-... on ComponentPageBlocksCircledLeftImage {
+... on ComponentBlocksLeftImageAndText {
   __typename
     id
     title

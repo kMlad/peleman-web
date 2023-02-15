@@ -1,5 +1,5 @@
 const TitleBlockQuery = `
-... on ComponentPageBlocksTitle {
+... on ComponentBlocksTitle {
     id
     centeredTitle {
       id

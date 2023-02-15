@@ -1,5 +1,5 @@
 const ImageBlockQuery = `
-... on ComponentPageBlocksImage{
+... on ComponentBlocksImage{
     id
     image{
       data{

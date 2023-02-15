@@ -1,7 +1,7 @@
 // import {IMAGE_QUERY} from "../../../utils/queries";
 
 const HeroBlockQuery = `
-... on ComponentPageBlocksHero {
+... on ComponentBlocksHero {
     __typename
     id
     size

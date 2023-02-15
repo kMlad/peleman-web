@@ -1,6 +1,6 @@
 // IMAGE DOESNT WORK FFS
 const BenefitsBlockQuery = `
-... on ComponentPageBlocksBenefits {
+... on ComponentBlocksBenefits {
   __typename
     id
     title

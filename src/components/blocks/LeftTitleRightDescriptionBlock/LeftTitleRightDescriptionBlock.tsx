@@ -1,12 +1,12 @@
 import React from 'react';
 import Title from '../../components/Title';
-import { ComponentPageBlocksLeftTitleRightDescription } from '@utils/types';
+import { ComponentBlocksLeftTitleRightDescription } from '@utils/types';
 import ReactMarkdown from 'react-markdown';
 
 function LeftTitleRightDescriptionBlock({
   title,
   description,
-}: ComponentPageBlocksLeftTitleRightDescription): JSX.Element {
+}: ComponentBlocksLeftTitleRightDescription): JSX.Element {
   return (
     <div className="container mx-auto flex flex-col">
       <div className="flex-row sm:flex">

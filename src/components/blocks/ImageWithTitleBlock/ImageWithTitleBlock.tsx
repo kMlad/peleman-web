@@ -1,14 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
 import TimerImage from './assets/TimerImage.svg';
-import { ComponentPageBlocksImageWithTitle } from '@utils/types';
+import { ComponentBlocksImageWithTitle } from '@utils/types';
 import findMediaUrl from '@utils/findMediaUrl';
 import ReactMarkdown from 'react-markdown';
 
 function ImageWithTitleBlock({
   title,
   image,
-}: ComponentPageBlocksImageWithTitle): JSX.Element {
+}: ComponentBlocksImageWithTitle): JSX.Element {
   return (
     <div className="container my-10 mx-auto flex flex-col items-center justify-center gap-4 md:flex-row xl:px-4 2xl:px-0">
       <div className="shrink-0">

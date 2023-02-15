@@ -1,5 +1,5 @@
 const ButtonsBlockQuery = `
-... on ComponentPageBlocksButtons {
+... on ComponentBlocksButtons {
   __typename
   id
   buttons {

@@ -1,8 +1,8 @@
 import Button from '@components/Button';
-import { ComponentPageBlocksButtons } from '@utils/types';
+import { ComponentBlocksButtons } from '@utils/types';
 import React from 'react';
 
-function ButtonBlock({ buttons }: ComponentPageBlocksButtons): JSX.Element {
+function ButtonBlock({ buttons }: ComponentBlocksButtons): JSX.Element {
   return (
     <div className="container mx-auto my-5 flex flex-col items-center justify-center gap-8 sm:flex-row sm:flex-wrap sm:gap-20">
       {buttons?.map((item, index) => (

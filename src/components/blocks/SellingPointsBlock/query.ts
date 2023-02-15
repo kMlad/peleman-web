@@ -1,5 +1,5 @@
 const SellingPointBlockQuery = `
-...on ComponentPageBlocksSellingPoints{
+...on ComponentBlocksSellingPoints{
     id
     benefits{
       id

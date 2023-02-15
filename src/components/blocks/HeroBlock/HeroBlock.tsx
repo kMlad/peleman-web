@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../components/Button';
 import heroImagePlaceholder from './assets/hero.png';
 import findMediaUrl from '../../../utils/findMediaUrl';
-import { ComponentPageBlocksHero } from '@utils/types';
+import { ComponentBlocksHero } from '@utils/types';
 import ReactMarkdown from 'react-markdown';
 
 function HeroBlock({
@@ -12,7 +12,7 @@ function HeroBlock({
   heroImage,
   smallTitle,
   button,
-}: ComponentPageBlocksHero): JSX.Element {
+}: ComponentBlocksHero): JSX.Element {
   let style = '';
 
   switch (size) {
@@ -42,7 +42,7 @@ function HeroBlock({
         </div>
         {!smallTitle && <div className="py-4 lg:py-5" />}
         <div className="w-[80%] text-[28px] font-thin leading-[35px] text-white prose-strong:font-bold sm:w-[55%] lg:text-[50px] lg:leading-[50px]   ">
-          <ReactMarkdown>{title ?? ''}</ReactMarkdown>
+          <ReactMarkdown>{title}</ReactMarkdown>
         </div>
         {description && (
           <div className="mt-2 w-[60%] text-base font-light text-white md:mb-4 md:text-2xl lg:mt-[2px] lg:w-[35%]">

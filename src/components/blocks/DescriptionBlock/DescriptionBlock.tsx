@@ -1,12 +1,12 @@
-import { ComponentPageBlocksDescription } from '@utils/types';
+import { ComponentBlocksDescription } from '@utils/types';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
 function DescriptionBlock({
-  cta,
+  description,
   alignment,
   fontSize,
-}: ComponentPageBlocksDescription): JSX.Element {
+}: ComponentBlocksDescription): JSX.Element {
   return (
     <div className="container m-auto flex 2xl:px-40">
       <div className="mt-10 w-full">
@@ -18,7 +18,7 @@ function DescriptionBlock({
               ? 'text-left'
               : 'text-center'
           } ${
-            fontSize == 'Big'
+            fontSize == 'Large'
               ? 'text-[20px] leading-9 sm:text-[28px]'
               : fontSize == 'Small'
               ? 'text-[18px] leading-7  sm:text-[22px]'
@@ -26,7 +26,7 @@ function DescriptionBlock({
           }              
               font-light  text-darkGrey prose-ul:ml-5 prose-ul:list-disc`}
         >
-          <ReactMarkdown>{cta ?? ''}</ReactMarkdown>
+          <ReactMarkdown>{description}</ReactMarkdown>
         </div>
       </div>
     </div>

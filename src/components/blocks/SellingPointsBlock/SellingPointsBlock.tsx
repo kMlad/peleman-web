@@ -1,14 +1,14 @@
 import React from 'react';
 import Benefit from '@components/Benefit';
 import {
-  ComponentPageBlocksSellingPoints,
+  ComponentBlocksSellingPoints,
   UploadFileEntityResponse,
 } from '@utils/types';
 import placeholderImage from './assets/secondImage.png';
 
 function SellingPointsBlock({
   benefits,
-}: ComponentPageBlocksSellingPoints): JSX.Element {
+}: ComponentBlocksSellingPoints): JSX.Element {
   return (
     <>
       <div className="m-auto max-w-[80%] pb-10 sm:pb-10 xl:pb-20">

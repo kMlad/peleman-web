@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import deskImage from './assets/desktopImage.png';
-import { ComponentPageBlocksCircledLeftImage } from '@utils/types';
+import { ComponentBlocksLeftImageAndText } from '@utils/types';
 import ReactMarkdown from 'react-markdown';
 import findMediaUrl from '@utils/findMediaUrl';
 import { useMediaQuery } from 'react-responsive';
@@ -12,7 +12,7 @@ function CircledLeftImageBlock({
   description,
   button,
   image,
-}: ComponentPageBlocksCircledLeftImage): JSX.Element {
+}: ComponentBlocksLeftImageAndText): JSX.Element {
   const isMobile = useMediaQuery({ maxWidth: 1252 });
   return (
     <>

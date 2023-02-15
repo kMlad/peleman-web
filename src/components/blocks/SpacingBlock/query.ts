@@ -1,5 +1,5 @@
 const SpacingBlockQuery = `
-... on ComponentPageBlocksSpacing{
+... on ComponentBlocksSpacing{
   id
   sizeHeight
   __typename

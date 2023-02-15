@@ -1,5 +1,5 @@
 const MarqeeBlockQuery = `
-... on  ComponentPageBlocksMarqee{
+... on  ComponentBlocksMarquee{
     id
     logos{
       data{

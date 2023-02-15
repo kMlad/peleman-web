@@ -1,5 +1,5 @@
 const ImageWithTitleBlockQuery = `
-... on ComponentPageBlocksImageWithTitle {
+... on ComponentBlocksImageWithTitle {
   __typename
     id
     title

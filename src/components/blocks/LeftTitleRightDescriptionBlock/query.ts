@@ -1,5 +1,5 @@
 const LeftTitleRightDescriptionBlockQuery = `
-... on ComponentPageBlocksLeftTitleRightDescription{
+... on ComponentBlocksLeftTitleRightDescription{
     id
     title
     description

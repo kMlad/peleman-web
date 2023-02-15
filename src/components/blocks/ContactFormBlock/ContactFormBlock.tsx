@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
-import Link from "next/link";
 import * as yup from "yup";
 import { useFormik } from "formik";
 import type { ComponentBlocksContactForm } from "@utils/types";

@@ -1,7 +1,7 @@
-import { ComponentPageBlocksSpacing } from '@utils/types';
+import { ComponentBlocksSpacing } from '@utils/types';
 import React, { useEffect, useState } from 'react';
 
-function SpacingBlock({ sizeHeight }: ComponentPageBlocksSpacing): JSX.Element {
+function SpacingBlock({ sizeHeight }: ComponentBlocksSpacing): JSX.Element {
   const [height, setHeight] = useState<string>('');
 
   useEffect(() => {

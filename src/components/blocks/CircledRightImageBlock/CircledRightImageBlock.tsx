@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import deskImage from './assets/desktopImage.png';
-import { ComponentPageBlocksCircledRightImage } from '@utils/types';
+import { ComponentBlocksRightImageAndText } from '@utils/types';
 import ReactMarkdown from 'react-markdown';
 import findMediaUrl from '@utils/findMediaUrl';
 import { useMediaQuery } from 'react-responsive';
@@ -12,7 +12,7 @@ function CircledRightImageBlock({
   description,
   image,
   button,
-}: ComponentPageBlocksCircledRightImage): JSX.Element {
+}: ComponentBlocksRightImageAndText): JSX.Element {
   const isMobile = useMediaQuery({ maxWidth: 1252 });
   return (
     <>
