@@ -4,7 +4,6 @@ import {
   ComponentBlocksSellingPoints,
   UploadFileEntityResponse,
 } from '@utils/types';
-import placeholderImage from './assets/secondImage.png';
 
 function SellingPointsBlock({
   benefits,
@@ -20,8 +19,7 @@ function SellingPointsBlock({
                 title={item?.title ?? ''}
                 alignment="center"
                 image={
-                  item?.image ??
-                  (placeholderImage.src as UploadFileEntityResponse)
+                  item?.image ?? "" as UploadFileEntityResponse
                 }
               />
             </div>

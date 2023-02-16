@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '../../components/Button';
-import heroImagePlaceholder from './assets/hero.png';
 import findMediaUrl from '../../../utils/findMediaUrl';
 import { ComponentBlocksHero } from '@utils/types';
 import ReactMarkdown from 'react-markdown';
@@ -32,7 +31,7 @@ function HeroBlock({
       className={style}
       style={{
         backgroundImage: `url('${
-          findMediaUrl(heroImage) ?? heroImagePlaceholder.src
+          findMediaUrl(heroImage)
         }')`,
       }}
     >

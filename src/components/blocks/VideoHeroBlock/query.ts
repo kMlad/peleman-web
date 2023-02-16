@@ -1,4 +1,4 @@
-const VideoHeroTemplate = `
+const VideoHeroBlockQuery = `
 ... on ComponentBlocksVideoHero {
     video {
       data {
@@ -33,4 +33,4 @@ const VideoHeroTemplate = `
   }
 `
 
-export default VideoHeroTemplate;
+export default VideoHeroBlockQuery;

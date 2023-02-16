@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import placeholderImage from "./assets/placeholder.png";
 import findMediaUrl from "@utils/findMediaUrl";
 import { ComponentBlocksLeftImageRightText } from "@utils/types";
 import ReactMarkdown from "react-markdown";
@@ -16,7 +15,7 @@ function LeftImageRightTextBlock({
         <div className={`flex h-full w-full xl:w-[90%]`}>
           <Image
             alt="image"
-            src={findMediaUrl(image) ?? placeholderImage.src}
+            src={findMediaUrl(image) ?? ""}
             height={316}
             width={316}
           />

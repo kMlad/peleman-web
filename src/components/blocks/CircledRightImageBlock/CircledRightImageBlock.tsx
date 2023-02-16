@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
-import deskImage from './assets/desktopImage.png';
 import { ComponentBlocksRightImageAndText } from '@utils/types';
 import ReactMarkdown from 'react-markdown';
 import findMediaUrl from '@utils/findMediaUrl';
@@ -37,7 +36,7 @@ function CircledRightImageBlock({
         <div className="flex h-full w-full shrink-0 basis-[33%] justify-end ">
           <Image
             alt="image"
-            src={findMediaUrl(image) ?? deskImage.src}
+            src={findMediaUrl(image) ?? ""}
             height={image?.data?.attributes?.height ?? 464}
             width={image?.data?.attributes?.width ?? 464}
             layout={`${isMobile ? 'intrinsic' : 'fixed'}`}

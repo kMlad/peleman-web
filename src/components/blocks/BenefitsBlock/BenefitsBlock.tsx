@@ -1,6 +1,5 @@
 import React from 'react';
 import Benefit from '@components/Benefit';
-import placeholderImage from './assets/secondImage.png';
 import {
   ComponentBlocksBenefits,
   UploadFileEntityResponse,
@@ -26,8 +25,7 @@ function BenefitsBlock({
               description={item?.description ?? ''}
               title={item?.title ?? ''}
               image={
-                item?.image ??
-                (placeholderImage.src as UploadFileEntityResponse)
+                item?.image as UploadFileEntityResponse
               }
               alignment={item?.alignment as 'left' | 'right' | 'center'}
             />

@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import imageBig from '../ImageBlock/assets/image.png';
 import {
   ComponentBlocksImage,
 } from '@utils/types';
@@ -12,7 +11,7 @@ function ImageBlock({ image, description }: ComponentBlocksImage): JSX.Element {
       <div className="container">
         <Image
           alt="image"
-          src={findMediaUrl(image) ?? imageBig.src}
+          src={findMediaUrl(image) ?? ""}
           height={image?.data?.attributes?.height ?? 221}
           width={image?.data?.attributes?.width ?? 600}
           layout="responsive"

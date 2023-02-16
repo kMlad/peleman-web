@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import TimerImage from './assets/TimerImage.svg';
 import { ComponentBlocksImageWithTitle } from '@utils/types';
 import findMediaUrl from '@utils/findMediaUrl';
 import ReactMarkdown from 'react-markdown';
@@ -14,7 +13,7 @@ function ImageWithTitleBlock({
       <div className="shrink-0">
         <Image
           alt="image"
-          src={findMediaUrl(image) ?? (TimerImage as string)}
+          src={findMediaUrl(image) ?? ""}
           height={image?.data?.attributes?.height ?? 138}
           width={image?.data?.attributes?.width ?? 107}
         />
