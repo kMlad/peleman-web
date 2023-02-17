@@ -20,7 +20,7 @@ const ImageBlockQuery = `
       }
       __typename
     }
-    desc
+    description
     __typename
   }
 `;

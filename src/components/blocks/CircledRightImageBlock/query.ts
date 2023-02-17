@@ -8,7 +8,6 @@ const CircledRightImageBlockQuery = `
       id
       cta
       link
-      hasLink
       __typename
     }
     image {

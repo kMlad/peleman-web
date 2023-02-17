@@ -6,7 +6,6 @@ const ButtonsBlockQuery = `
     id
     cta
     link
-    hasLink
     color
     __typename
   }

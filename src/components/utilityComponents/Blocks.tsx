@@ -19,6 +19,7 @@ import DescriptionBlock from "@blocks/DescriptionBlock/DescriptionBlock";
 import BreadcrumbsBlock from "@blocks/BreadcrumbsBlock/BreadcrumbsBlock";
 import ImageBlock from "@blocks/ImageBlock/ImageBlock";
 import ContactFormBlock from "@blocks/ContactFormBlock/ContactFormBlock";
+import VideoHeroBlock from "@blocks/VideoHeroBlock/VideoHeroBlock";
 
 interface P {
   singlePageData: PageEntity;
@@ -31,7 +32,7 @@ export function Blocks({ singlePageData }: P) {
         ? singlePageData.attributes.pageBlocks.map(
             (block: any, i): JSX.Element | null | undefined => {
               switch (block?.__typename) {
-                case "ComponentPageBlocksHero":
+                case "ComponentBlocksHero":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <HeroBlock {...block} />
@@ -39,14 +40,14 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksTitle":
+                case "ComponentBlocksTitle":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <TitleBlock {...block} />
                     </React.Fragment>
                   );
                   break;
-                case "ComponentPageBlocksBenefits":
+                case "ComponentBlocksBenefits":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <BenefitsBlock {...block} />
@@ -54,15 +55,7 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksMarqee":
-                  return (
-                    <React.Fragment key={`${i}block.__typename`}>
-                      <MarqueeBlock {...block} />
-                    </React.Fragment>
-                  );
-                  break;
-
-                case "ComponentPageBlocksSellingPoints":
+                case "ComponentBlocksSellingPoints":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <SellingPointsBlock {...block} />
@@ -70,7 +63,7 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksButtons":
+                case "ComponentBlocksButtons":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <ButtonBlock {...block} />
@@ -78,21 +71,21 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksImageWithTitle":
+                case "ComponentBlocksImageWithTitle":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <ImageWithTitleBlock {...block} />
                     </React.Fragment>
                   );
                   break;
-                case "ComponentPageBlocksCallToAction":
+                case "ComponentBlocksCallToAction":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <CallToActionBlock {...block} />
                     </React.Fragment>
                   );
                   break;
-                case "ComponentPageBlocksLeftTitleRightDescription":
+                case "ComponentBlocksLeftTitleRightDescription":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <LeftTitleRightDescriptionBlock {...block} />
@@ -100,7 +93,7 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksDescription":
+                case "ComponentBlocksDescription":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <DescriptionBlock {...block} />
@@ -108,14 +101,14 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksCircledLeftImage":
+                case "ComponentBlocksLeftImageAndText":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <CircledLeftImageBlock {...block} />
                     </React.Fragment>
                   );
                   break;
-                case "ComponentPageBlocksCircledRightImage":
+                case "ComponentBlocksRightImageAndText":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <CircledRightImageBlock {...block} />
@@ -123,7 +116,7 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksButtons":
+                case "ComponentBlocksButtons":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <ButtonBlock {...block} />
@@ -131,7 +124,7 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksBreadcrumbs":
+                case "ComponentBlocksBreadcrumbs":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <BreadcrumbsBlock page={singlePageData} />
@@ -139,14 +132,14 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksLeftImageRightText":
+                case "ComponentBlocksLeftImageRightText":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <LeftImageRightTextBlock {...block} />
                     </React.Fragment>
                   );
                   break;
-                case "ComponentPageBlocksSpacing":
+                case "ComponentBlocksSpacing":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <SpacingBlock {...block} />
@@ -154,7 +147,7 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksTitle":
+                case "ComponentBlocksTitle":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <TitleBlock {...block} />
@@ -170,13 +163,37 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentPageBlocksImage":
+                case "ComponentBlocksImage":
                   return (
                     <React.Fragment key={`${i}block.__typename`}>
                       <ImageBlock {...block} />
                     </React.Fragment>
                   );
                   break;
+
+                case "ComponentBlocksMarquee":
+                  return (
+                    <React.Fragment key={`${i}block.__typename`}>
+                      <MarqueeBlock {...block} />
+                    </React.Fragment>
+                  );
+                  break;
+
+                  case "ComponentBlocksVideoHero":
+                  return (
+                    <React.Fragment key={`${i}block.__typename`}>
+                      <VideoHeroBlock {...block} />
+                    </React.Fragment>
+                  );
+                  break;
+
+                  case "ComponentBlocksLeftTitleRightDescription":
+                    return (
+                      <React.Fragment key={`${i}block.__typename`}>
+                        <LeftTitleRightDescriptionBlock {...block} />
+                      </React.Fragment>
+                    );
+                    break;
 
                 default:
                   return null;
@@ -188,4 +205,5 @@ export function Blocks({ singlePageData }: P) {
   );
 }
 
+//TODO: Make sure all blocks render
 export default Blocks;

@@ -1,5 +1,5 @@
 const CallToActionBlockQuery = `
-... on ComponentPageBlocksCallToAction {
+... on ComponentBlocksCallToAction {
   __typename
     id
     title
@@ -8,7 +8,6 @@ const CallToActionBlockQuery = `
       id
       cta
       link
-      hasLink
     }
 }
 `;

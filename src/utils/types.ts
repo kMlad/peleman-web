@@ -71,7 +71,7 @@ export type ComponentBlocksButtonsButtonsArgs = {
 export type ComponentBlocksCallToAction = {
   __typename?: 'ComponentBlocksCallToAction';
   buttons: Array<Maybe<ComponentComponentsButton>>;
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   title: Scalars['String'];
 };
@@ -85,7 +85,7 @@ export type ComponentBlocksCallToActionButtonsArgs = {
 
 export type ComponentBlocksContactForm = {
   __typename?: 'ComponentBlocksContactForm';
-  button: Scalars['String'];
+  buttonCta: Scalars['String'];
   cta: Scalars['String'];
   email: Scalars['String'];
   id: Scalars['ID'];
@@ -96,7 +96,7 @@ export type ComponentBlocksContactForm = {
 export type ComponentBlocksDescription = {
   __typename?: 'ComponentBlocksDescription';
   alignment: Enum_Componentblocksdescription_Alignment;
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   fontSize: Enum_Componentblocksdescription_Fontsize;
   id: Scalars['ID'];
 };
@@ -114,7 +114,7 @@ export type ComponentBlocksHero = {
 
 export type ComponentBlocksImage = {
   __typename?: 'ComponentBlocksImage';
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   image: UploadFileEntityResponse;
 };
@@ -129,7 +129,7 @@ export type ComponentBlocksImageWithTitle = {
 export type ComponentBlocksLeftImageAndText = {
   __typename?: 'ComponentBlocksLeftImageAndText';
   button?: Maybe<ComponentComponentsButton>;
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   image: UploadFileEntityResponse;
   title: Scalars['String'];
@@ -137,7 +137,7 @@ export type ComponentBlocksLeftImageAndText = {
 
 export type ComponentBlocksLeftImageRightText = {
   __typename?: 'ComponentBlocksLeftImageRightText';
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   image: UploadFileEntityResponse;
   title: Scalars['String'];
@@ -145,7 +145,7 @@ export type ComponentBlocksLeftImageRightText = {
 
 export type ComponentBlocksLeftTitleRightDescription = {
   __typename?: 'ComponentBlocksLeftTitleRightDescription';
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   title: Scalars['String'];
 };
@@ -167,7 +167,7 @@ export type ComponentBlocksMarqueeLogosArgs = {
 export type ComponentBlocksRightImageAndText = {
   __typename?: 'ComponentBlocksRightImageAndText';
   button?: Maybe<ComponentComponentsButton>;
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   image: UploadFileEntityResponse;
   title: Scalars['String'];
@@ -175,7 +175,7 @@ export type ComponentBlocksRightImageAndText = {
 
 export type ComponentBlocksSellingPoints = {
   __typename?: 'ComponentBlocksSellingPoints';
-  benefits: Array<Maybe<ComponentComponentsBenefit>>;
+  benefits?: Maybe<Array<Maybe<ComponentComponentsBenefit>>>;
   id: Scalars['ID'];
 };
 
@@ -194,10 +194,10 @@ export type ComponentBlocksSpacing = {
 
 export type ComponentBlocksTitle = {
   __typename?: 'ComponentBlocksTitle';
-  alignment: Enum_Componentblockstitle_Alignment;
-  fontSize: Enum_Componentblockstitle_Fontsize;
   id: Scalars['ID'];
   title: Scalars['String'];
+  titleAlignment: Enum_Componentblockstitle_Titlealignment;
+  titleFontSize: Enum_Componentblockstitle_Titlefontsize;
 };
 
 export type ComponentBlocksVideoHero = {
@@ -210,7 +210,7 @@ export type ComponentBlocksVideoHero = {
 export type ComponentComponentsBenefit = {
   __typename?: 'ComponentComponentsBenefit';
   alignment?: Maybe<Enum_Componentcomponentsbenefit_Alignment>;
-  description: Scalars['String'];
+  description?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   image?: Maybe<UploadFileEntityResponse>;
   title: Scalars['String'];
@@ -348,13 +348,13 @@ export enum Enum_Componentblocksspacing_Sizeheight {
   Xxxl = 'xxxl'
 }
 
-export enum Enum_Componentblockstitle_Alignment {
+export enum Enum_Componentblockstitle_Titlealignment {
   Center = 'center',
   Left = 'left',
   Right = 'right'
 }
 
-export enum Enum_Componentblockstitle_Fontsize {
+export enum Enum_Componentblockstitle_Titlefontsize {
   Big = 'Big',
   Small = 'Small'
 }
@@ -778,7 +778,7 @@ export type PageInput = {
   title?: InputMaybe<Scalars['String']>;
 };
 
-export type PagePageBlocksDynamicZone = ComponentBlocksContactForm | Error;
+export type PagePageBlocksDynamicZone = ComponentBlocksBenefits | ComponentBlocksButtons | ComponentBlocksCallToAction | ComponentBlocksContactForm | ComponentBlocksDescription | ComponentBlocksHero | ComponentBlocksImage | ComponentBlocksImageWithTitle | ComponentBlocksLeftImageAndText | ComponentBlocksLeftImageRightText | ComponentBlocksLeftTitleRightDescription | ComponentBlocksMarquee | ComponentBlocksRightImageAndText | ComponentBlocksSellingPoints | ComponentBlocksSpacing | ComponentBlocksTitle | ComponentBlocksVideoHero | Error;
 
 export type PageRelationResponseCollection = {
   __typename?: 'PageRelationResponseCollection';

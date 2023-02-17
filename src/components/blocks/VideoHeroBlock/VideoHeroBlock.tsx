@@ -4,7 +4,7 @@ import { useMediaQuery } from "react-responsive";
 
 import { ComponentBlocksVideoHero } from "@utils/types";
 
-function HomepageHeroBlock({
+function VideoHeroBlock({
   video,
   mobileVideo,
 }: ComponentBlocksVideoHero): JSX.Element {
@@ -48,4 +48,4 @@ function HomepageHeroBlock({
   );
 }
 
-export default HomepageHeroBlock;
+export default VideoHeroBlock;

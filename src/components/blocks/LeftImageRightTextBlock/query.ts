@@ -3,7 +3,7 @@ const LeftImageRightTextBlockQuery = `
     id
     title
     description
-    circledImage {
+    image {
         __typename
         data {
           id

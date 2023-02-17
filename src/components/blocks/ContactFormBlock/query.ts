@@ -4,7 +4,7 @@ const ContactFormQuery = `
   phoneNumber
   title
   cta
-  button
+  buttonCta
   __typename
 }
 `;

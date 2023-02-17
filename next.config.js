@@ -2,7 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'peleman.underdog.mk',
+        
+      },
+    ],
   },
   async redirects() {
     return [
