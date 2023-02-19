@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 
+import findMediaUrl from "@utils/findMediaUrl";
 import { ComponentBlocksVideoHero } from "@utils/types";
 
 function VideoHeroBlock({
@@ -12,17 +13,17 @@ function VideoHeroBlock({
 
   return (
     <div
-      className={`pb-60 xs:pb-80 phoneLarge:pb-96 pt-40 w-full bg-darkGreen md:pb-0 md:pt-0`}
+      className={`aspect-video pb-60 xs:pb-80 relative phoneLarge:pb-96 pt-40 w-full bg-darkGreen md:pb-0 md:pt-0`}
     >
       {!isPhone && (
         <video
           autoPlay
           muted
-          loop={false}
+          loop
           className="absolute bottom-[9%] min-w-full min-h-full"
         >
           <source
-            src={video.data?.attributes?.previewUrl ?? ""}
+            src={findMediaUrl(video) ?? ""}
             type="video/mp4"
           />
         </video>
@@ -37,8 +38,8 @@ function VideoHeroBlock({
           <source
             src={
               (mobileVideo
-                ? mobileVideo.data?.attributes?.previewUrl
-                : video.data?.attributes?.previewUrl) ?? ""
+                ? findMediaUrl(mobileVideo)
+                : findMediaUrl(video)) ?? ""
             }
             type="video/mp4"
           />

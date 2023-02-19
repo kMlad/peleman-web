@@ -85,13 +85,13 @@ export const headerData: HeaderData = {
     { name: 'Дома', href: 'linkHome', current: false, newTab: false },
     { name: 'За нас', href: 'linkHome', current: false, newTab: false },
     {
-      name: 'Уреди за коричење',
+      name: 'Производи',
       href: 'linkProducts',
       current: false,
       newTab: false,
     },
     {
-      name: 'Персонализација',
+      name: 'Индустрии',
       href: 'linkServices',
       current: false,
       newTab: false,

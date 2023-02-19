@@ -16,7 +16,7 @@ interface Values {
 const ContactFormBlock = ({
   email,
   phoneNumber,
-  button,
+  buttonCta,
   cta,
   title
 }: ComponentBlocksContactForm): JSX.Element => {
@@ -194,7 +194,7 @@ const ContactFormBlock = ({
                     disabled={isSubmitted}
                     className="mt-10 cursor-pointer flex  py-2 px-16 text-red   w-full sm:w-auto sm:self-center justify-center shrink-0 text-2xl bg-darkNavy min-w-[180px] text-center text-white hover:bg-orange font-bold transition duration-200"
                   >
-                    {button}
+                    {buttonCta}
                   </button>
                 </div>
               </div>

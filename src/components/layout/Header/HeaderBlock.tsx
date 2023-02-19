@@ -3,7 +3,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useCallback, useState } from "react";
 import SVG from "react-inlinesvg";
 import BurgerMenu from "./BurgerMenu";
@@ -13,8 +12,8 @@ import headerData, {
   headerDataSolutions,
   headerDataAdditionalProducts,
 } from "./headerData";
-import menu from "./assets/menu.png";
-import logoWhite from "./assets/logo-white.png";
+import menu from "../../../assets/burger-white.svg";
+import logoWhite from "../../../assets/logo-small-white.svg";
 import logo from "../../../assets/logo-big.png";
 import Button from "@components/Button";
 
@@ -38,9 +37,9 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
 
   return (
     <>
-      <div className="z-50 w-full">
+      <div className="z-50 relative w-full">
         <div className=" bg-orange ">
-          <div className="flex h-[80px] flex-col justify-center lg:container lg:mx-auto lg:h-auto lg:py-1">
+          <div className="flex h-[80px] shadow-customMobile flex-col justify-center lg:container lg:mx-auto lg:h-auto lg:py-1">
             <div className="flex items-center gap-x-4">
               <div
                 id="menu-links"
@@ -77,7 +76,7 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
           <div className="hidden h-[70px] justify-between bg-white text-orange lg:flex lg:flex-row shadow-customDeep">
             <div className="container mx-auto flex items-center flex-row justify-between">
               <div className="hidden lg:block">
-                <Link href="https://layershift-web.solvio.it/home">
+                <Link href="/doma">
                   <Image src={logo.src} alt="logo" height={90} width={300} />
                 </Link>
               </div>
@@ -87,16 +86,16 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
               >
                 {headerData.navLinks?.map((link) => (
                   <span key={Math.random()}>
-                    {link.name !== "Уреди за коричење" &&
-                      link.name !== "Персонализација" && (
-                        <span className="hover:font-bold">
+                    {link.name !== "Производи" &&
+                      link.name !== "Индустрии" && (
+                        <span className="hover:font-bold ">
                           <Link key={link.name} href={link.href}>
                             {link.name}
                           </Link>
                         </span>
                       )}
 
-                    {link.name === "Уреди за коричење" && (
+                    {link.name === "Производи" && (
                       <button
                         onClick={() =>
                           setMegaMenuShow(
@@ -109,7 +108,7 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
                         <SVG src={downArrow.src} className="ml-2" />
                       </button>
                     )}
-                    {link.name === "Персонализација" && (
+                    {link.name === "Индустрии" && (
                       <button
                         onClick={() =>
                           setMegaMenuShow(

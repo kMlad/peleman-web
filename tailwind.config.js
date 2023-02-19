@@ -11,6 +11,7 @@ module.exports = {
       custom: '0px 0px 10px 0px rgba(0,0,0,0.1);',
       customDropdown: '0px 10px 10px 0px rgba(0,0,0,0.1);',
       customDeep: '-4px 4px 10px 0px rgba(0,0,0,0.1);',
+      customMobile: 'rgba(0, 0, 0, 0.25) 0px 0.5px 1px, rgba(0, 0, 0, 0.22) 0px 5px 40px;'
     },
     colors: {
       black: '#000000',

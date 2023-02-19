@@ -5,10 +5,8 @@ import SVG from "react-inlinesvg";
 
 import { Link as HeaderLink } from "../Header/MegaMenu";
 import { HeaderData, P as MegaMenuProps } from "./MegaMenu";
-import x from "./assets/x.png";
-import logo from "./assets/burgerLogoNew.svg";
-import avatar from "./assets/icon.png";
-import cart from "./assets/cart.svg";
+import x from "../../../assets/x.svg";
+import logo from "../../../assets/big-logo-white.svg";
 import arrow from "./assets/burgerarrow.svg";
 import Button from "@components/Button";
 
@@ -34,7 +32,7 @@ const BurgerMenu = ({
       <section id="mobile" className="block lg:hidden">
         <div className="fixed inset-0 z-50 h-screen w-full overflow-y-scroll bg-orange xl:hidden">
           <div>
-            <nav className="flex flex-row items-center justify-between px-5 py-3">
+            <nav className="flex flex-row h-[80px] items-center justify-between px-5 ">
               <Link href="/home">
                 <Image
                   src={logo.src}
@@ -48,7 +46,7 @@ const BurgerMenu = ({
                   className="flex cursor-pointer items-center"
                   onClick={() => closeBurgerMenu()}
                 >
-                  <Image src={x.src} alt="x" width={24.16} height={24.12} />
+                  <Image src={x.src} alt="x" width={24.16} height={24.12} unoptimized />
                 </button>
               </div>
             </nav>
@@ -61,16 +59,16 @@ const BurgerMenu = ({
                     <li
                       key={item.name}
                       className={`flex items-center ${
-                        item.name === "Уреди за коричење" ||
-                        item.name === "Персонализација" ||
+                        item.name === "Производи" ||
+                        item.name === "Индустрии" ||
                         item.name === "Дома" ||
                         item.name === "За нас"
                           ? ""
                           : "pb-5"
                       }`}
                     >
-                      {item.name !== "Уреди за коричење" &&
-                        item.name !== "Персонализација" && (
+                      {item.name !== "Производи" &&
+                        item.name !== "Индустрии" && (
                           <Link
                             href={item.href}
                             passHref
@@ -80,7 +78,7 @@ const BurgerMenu = ({
                           </Link>
                         )}
 
-                      {item.name === "Уреди за коричење" && (
+                      {item.name === "Производи" && (
                         <button
                           onClick={() =>
                             setAdditionalProductsMenu(!additionalProductsMenu)
@@ -96,7 +94,7 @@ const BurgerMenu = ({
                           />
                         </button>
                       )}
-                      {item.name === "Персонализација" && (
+                      {item.name === "Индустрии" && (
                         <button
                           onClick={() => setSolutionsMenu(!solutionsMenu)}
                           className="flex items-center"
@@ -111,7 +109,7 @@ const BurgerMenu = ({
                         </button>
                       )}
                     </li>
-                    {item.name === "Уреди за коричење" &&
+                    {item.name === "Производи" &&
                       additionalProductsMenu && (
                         <ul className="flex flex-col gap-y-4 pb-5 text-lg">
                           {headerAdditionalProducts.categories?.[0].subitems?.map(
@@ -128,7 +126,7 @@ const BurgerMenu = ({
                           )}
                         </ul>
                       )}
-                    {item.name === "Персонализација" && solutionsMenu && (
+                    {item.name === "Индустрии" && solutionsMenu && (
                       <ul className="flex flex-col gap-y-4 pb-5  text-lg">
                         {headerSolutions.categories?.[0].subitems?.map(
                           (item: HeaderLink, index: number) => (

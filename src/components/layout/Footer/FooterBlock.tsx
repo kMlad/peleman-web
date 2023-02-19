@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import logo from "../../../assets/logo-small.png";
+import logo from "../../../assets/logo-small-white.svg";
 import facebookImage from "../../../assets/facebook.svg";
 import instagramImage from "../../../assets/instagram.svg";
 import messengerImage from "../../../assets/messenger.svg";
@@ -87,8 +87,7 @@ const FooterBlock = ({}): JSX.Element => {
           >
             <div className="pr-5 "> &copy; 2023</div>
             <div>
-              Принтин Тоуцх Д.О.О.Е.Л |{" "}
-              <Link href="/legal-notices">Права и услови</Link>{" "}
+              Принтин Тоуцх Д.О.О.Е.Л 
             </div>
           </div>
         </div>
