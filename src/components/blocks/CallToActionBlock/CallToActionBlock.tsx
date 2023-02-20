@@ -21,7 +21,7 @@ function CallToActionBlock({ buttons, title, description }: ComponentBlocksCallT
             </div>
           </div>
         </div>
-        <div className=" flex basis-1/2 flex-col gap-2 md:items-end">
+        <div className=" flex basis-1/2 flex-col justify-center gap-2 md:items-end">
           {buttons.map((item, index: number) => (
             <div key={index}>
               <Button cta={(item && item.cta) ?? ""} link={(item && item.link) ?? ""} color={'primary'} />

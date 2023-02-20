@@ -8,7 +8,7 @@ interface P {
   setShowLoginWindow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Layout = ({ children, showLoginWindow, setShowLoginWindow }: P) => {
+const Layout = ({ children }: P) => {
   return (
     <>
       <Head>
@@ -17,8 +17,6 @@ const Layout = ({ children, showLoginWindow, setShowLoginWindow }: P) => {
       </Head>
       <main>
         <HeaderBlock
-          showLoginWindow={showLoginWindow}
-          setShowLoginWindow={setShowLoginWindow}
           currentSlug={''}
         />
         {children}

@@ -16,10 +16,10 @@ function HeroBlock({
 
   switch (size) {
     case 'large':
-      style = ` lg:h-[610px]  py-5 sm:h-full h-[351px]  sm:px-[40px] lg:pt-[120px]  h-full  w-full bg-cover bg-center bg-no-repeat`;
+      style = `relative lg:h-[610px]  py-5 sm:h-full h-[351px]  sm:px-[40px] lg:pt-[120px]  h-full  w-full bg-cover bg-center bg-no-repeat`;
       break;
     case 'small':
-      style = ` xl:h-[550px] py-16  sm:px-[40px] sm:h-full h-[433px] h-full  w-full bg-cover bg-center bg-no-repeat `;
+      style = `relative xl:h-[550px] py-16  sm:px-[40px] sm:h-full h-[433px] h-full  w-full bg-cover bg-center bg-no-repeat `;
       break;
 
     default:
@@ -34,24 +34,24 @@ function HeroBlock({
           findMediaUrl(heroImage)
         }')`,
       }}
-    >
+    ><div className='absolute inset-0 z-10 bg-lightNavy opacity-30'/>
       <div className="container mx-auto  flex flex-col sm:mt-0  ">
-        <div className="text-base font-light text-white  sm:mt-16">
+        <div className="z-20 text-base font-light text-white  sm:mt-16">
           {smallTitle}
         </div>
         {!smallTitle && <div className="py-4 lg:py-5" />}
-        <div className="w-[80%] text-[28px] font-thin leading-[35px] text-white prose-strong:font-bold sm:w-[55%] lg:text-[50px] lg:leading-[50px]   ">
+        <div className="z-20 w-[80%] text-[28px] font-thin leading-[35px] text-white prose-strong:font-bold sm:w-[55%] lg:text-[50px] lg:leading-[50px]   ">
           <ReactMarkdown>{title}</ReactMarkdown>
         </div>
         {description && (
-          <div className="mt-2 w-[60%] text-base font-light text-white md:mb-4 md:text-2xl lg:mt-[2px] lg:w-[35%]">
+          <div className="z-20 mt-2 w-[60%] text-base font-light text-white md:mb-4 md:text-2xl lg:mt-[2px] lg:w-[35%]">
             {description}
           </div>
         )}
-        <div className="my-12 sm:my-0 sm:mt-4 ">
+        <div className="z-20 my-12 sm:my-0 sm:mt-4 ">
           {button?.cta && (
             <Button
-              color={'tertiary'}
+              color={button.color}
               link={button.link ?? '#'}
               cta={button.cta}
             />

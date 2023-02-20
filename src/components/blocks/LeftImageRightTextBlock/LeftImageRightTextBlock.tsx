@@ -21,11 +21,11 @@ function LeftImageRightTextBlock({
           />
         </div>
         <div className="md:pl-10">
-          <h3 className=" mt-12 mb-8 w-full text-lg font-semibold text-darkGrey md:w-[80%] ">
+          <h3 className=" mt-12 mb-8 w-full text-lg font-semibold text-darkNavy md:w-[80%] ">
             {title}
           </h3>
           <div className=" w-full list-disc text-lg  font-thin leading-8 md:w-[90%]">
-            <ReactMarkdown>{description}</ReactMarkdown>
+            <ReactMarkdown>{description ?? ""}</ReactMarkdown>
           </div>
         </div>
       </div>

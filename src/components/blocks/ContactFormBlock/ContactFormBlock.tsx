@@ -37,7 +37,7 @@ const ContactFormBlock = ({
     message: yup.string(),
   });
   const handleSubmit = async (values: Values) => {
-    let data = { ...values };
+    const data = { ...values };
     console.log("handleSubmit");
 
     await validationSchema
@@ -77,14 +77,14 @@ const ContactFormBlock = ({
     <div id="contact-me">
       {!showThankYou && (
         <div
-          className=" bg-gray md:py-20 pt-16  relative text-black bg-cover bg-center bg-no-repeat block "
+          className=" relative block bg-white  bg-cover bg-center bg-no-repeat pt-16 text-black md:py-20 "
           ref={ref}
         >
-          <section className="flex sm:container mx-auto justify-center items-center w-full">
-            <div className="flex flex-col justify-center items-start">
+          <section className="mx-auto flex w-full items-center justify-center sm:container">
+            <div className="flex flex-col items-start justify-center">
               <div className="mx-auto md:mb-6">
                 <p
-                  className={` leading-[65px]  text-orange font-bold md:text-[48px] text-3xl relative ${
+                  className={` relative  text-3xl font-bold leading-[65px] text-orange md:text-[48px] ${
                     inView ? "fade-in-left" : ""
                   }`}
                 >
@@ -93,11 +93,11 @@ const ContactFormBlock = ({
 
                 <div className="mt-6 mb-16">
                   <div
-                    className={`text-lg sm:px-0 flex flex-col gap-y-4 ${
+                    className={`flex flex-col gap-y-4 text-lg sm:px-0 ${
                       inView ? "fade-in-bottom" : ""
                     }`}
                   >
-                    <div className="flex flex-row gap-x-4 items-center">
+                    <div className="flex flex-row items-center gap-x-4">
                       <Image
                         unoptimized
                         src={telephoneIcon.src}
@@ -108,7 +108,7 @@ const ContactFormBlock = ({
                       />
                       <p className="text-darkNavy">{phoneNumber}</p>
                     </div>
-                    <div className="flex flex-row gap-x-4 items-center">
+                    <div className="flex flex-row items-center gap-x-4">
                       <Image
                         unoptimized
                         src={emailIcon.src}
@@ -123,7 +123,7 @@ const ContactFormBlock = ({
                 </div>
               </div>
               <p
-                className={` leading-[65px] text-orange md:mb-4 font-bold md:text-[40px] text-2xl relative ${
+                className={` relative text-2xl font-bold leading-[65px] text-orange md:mb-4 md:text-[40px] ${
                   inView ? "fade-in-left" : ""
                 }`}
               >
@@ -132,10 +132,10 @@ const ContactFormBlock = ({
             </div>
           </section>
           <form onSubmit={formik.handleSubmit}>
-            <div className=" text-sm  bg-white">
-              <div className="pb-8 sm:pb-8 sm:px-12 max-w-[920px] container mx-auto">
+            <div className=" bg-white  text-sm">
+              <div className="container mx-auto max-w-[920px] pb-8 sm:px-12 sm:pb-8">
                 <div className=" flex flex-col">
-                  <div className="flex flex-col items-center justify-between relative">
+                  <div className="relative flex flex-col items-center justify-between">
                     <input
                       type="text"
                       id="name"
@@ -144,10 +144,10 @@ const ContactFormBlock = ({
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.name}
-                      className="bg-lightNavy border-2 border-darkNavy placeholder-white outline-orange placeholder-opacity-80 text-white  mt-2 ml-0 py-3 pl-4 w-full text-sm md:mb-1  mb-2 "
+                      className="my-2 ml-0 w-full border-2 border-darkNavy bg-lightNavy py-3  pl-4 text-sm text-white outline-orange placeholder:text-white placeholder:text-opacity-80 md:mb-1"
                     />
                     {formik.errors.name ? (
-                      <p className="text-[#dc2626] mt-1 text-xs absolute -bottom-5 left-0">
+                      <p className="absolute -bottom-5 left-0 mt-1 text-xs text-[#dc2626]">
                         {formik.errors.name}
                       </p>
                     ) : null}
@@ -161,10 +161,10 @@ const ContactFormBlock = ({
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.email}
-                      className=" ml-0 py-3 w-full pl-4 mb-2 mt-10  text-sm bg-lightNavy border-2 border-darkNavy text-white placeholder-white placeholder-opacity-80 outline-orange "
+                      className=" ml-0 mb-2 mt-10 w-full border-2 border-darkNavy  bg-lightNavy py-3 pl-4 text-sm text-white outline-orange placeholder:text-white placeholder:text-opacity-80 "
                     />
                     {formik.errors.email ? (
-                      <p className="text-[#dc2626] mt-1 text-xs absolute -bottom-4 left-0">
+                      <p className="absolute -bottom-4 left-0 mt-1 text-xs text-[#dc2626]">
                         {formik.errors.email}
                       </p>
                     ) : null}
@@ -180,11 +180,11 @@ const ContactFormBlock = ({
                       value={formik.values.message}
                       cols={12}
                       rows={7}
-                      className="w-full pl-4  ml-0 p-3 bg-lightNavy border-2 border-darkNavy placeholder-white outline-orange placeholder-opacity-80 text-white  text-sm mb-2 mt-10"
+                      className="ml-0 mb-2  mt-10 w-full border-2 border-darkNavy bg-lightNavy p-3 pl-4 text-sm text-white  outline-orange placeholder:text-white placeholder:text-opacity-80"
                     />
                   </div>
                   {formik.errors.message ? (
-                    <p className="text-[#dc2626] mt-1 text-xs">
+                    <p className="mt-1 text-xs text-[#dc2626]">
                       {formik.errors.message}
                     </p>
                   ) : null}
@@ -192,7 +192,7 @@ const ContactFormBlock = ({
                   <button
                     type="submit"
                     disabled={isSubmitted}
-                    className="mt-10 cursor-pointer flex  py-2 px-16 text-red   w-full sm:w-auto sm:self-center justify-center shrink-0 text-2xl bg-darkNavy min-w-[180px] text-center text-white hover:bg-orange font-bold transition duration-200"
+                    className="mt-10 flex  w-full min-w-[180px] shrink-0   cursor-pointer justify-center bg-darkNavy py-2 px-16 text-center text-2xl font-bold text-white transition duration-200 hover:bg-orange sm:w-auto sm:self-center"
                   >
                     {buttonCta}
                   </button>
@@ -204,11 +204,11 @@ const ContactFormBlock = ({
       )}
       {showThankYou && (
         <div
-          className=" bg-lightNavy pt-60 pb-80 relative text-white bg-cover bg-center bg-no-repeat block "
+          className=" relative block bg-lightNavy bg-cover bg-center bg-no-repeat pt-60 pb-80 text-white "
           ref={ref}
         >
-          <div className="flex flex-col mx-auto container   pt-20  justify-center text-center items-center">
-            <div className="  block  relative mt-20 bottom-24 shrink-0">
+          <div className="container mx-auto flex flex-col   items-center  justify-center pt-20 text-center">
+            <div className="  relative  bottom-24 mt-20 block shrink-0">
               {/* <Image
                 quality={100}
                 alt="image"
@@ -221,7 +221,7 @@ const ContactFormBlock = ({
               /> */}
             </div>
             <p
-              className={`text-white font-bold text-[24px] relative mb-10  ${
+              className={`relative mb-10 text-[24px] font-bold text-white  ${
                 inView ? "fade-in-left" : ""
               }`}
               style={{ maxWidth: "60%" }}
@@ -229,7 +229,7 @@ const ContactFormBlock = ({
               Вашата порака е успешно испратена!{" "}
             </p>
             <div
-              className={`  prose text-[16px] prose-p:text-white text-white prose-p:my-0 lg:prose-p:my-0 pl-4 sm:pl-0 pr-4 sm:pr-0 	 ${
+              className={`  prose px-4 text-[16px] text-white prose-p:my-0 prose-p:text-white sm:px-0 lg:prose-p:my-0 	 ${
                 inView ? "fade-in-bottom" : ""
               }`}
             >

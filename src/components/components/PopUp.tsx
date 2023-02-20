@@ -15,7 +15,7 @@ function PopUp({
   secondDescription,
 }: P): JSX.Element {
   return (
-    <div onClick={closePopUp} className=" modal-backdrop relative">
+    <div onClick={closePopUp} className="relative">
       <div className="fixed top-1/2 left-1/2  z-50 flex  w-[860px] -translate-x-1/2  -translate-y-1/2 justify-center rounded-2xl bg-white p-4">
         <div className=" w-full md:h-auto ">
           <div className="mt-32 text-center font-semibold  ">

@@ -26,7 +26,7 @@ function DescriptionBlock({
           }              
               font-light  text-darkGrey prose-ul:ml-5 prose-ul:list-disc`}
         >
-          <ReactMarkdown>{description}</ReactMarkdown>
+          <ReactMarkdown>{description ?? ""}</ReactMarkdown>
         </div>
       </div>
     </div>

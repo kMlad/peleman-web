@@ -37,9 +37,9 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
 
   return (
     <>
-      <div className="z-50 relative w-full">
+      <div className="relative z-50 w-full">
         <div className=" bg-orange ">
-          <div className="flex h-[80px] shadow-customMobile flex-col justify-center lg:container lg:mx-auto lg:h-auto lg:py-1">
+          <div className="flex h-[80px] flex-col justify-center shadow-customMobile lg:container lg:mx-auto lg:h-auto lg:py-1">
             <div className="flex items-center gap-x-4">
               <div
                 id="menu-links"
@@ -73,8 +73,8 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
               </div>
             </div>
           </div>
-          <div className="hidden h-[70px] justify-between bg-white text-orange lg:flex lg:flex-row shadow-customDeep">
-            <div className="container mx-auto flex items-center flex-row justify-between">
+          <div className="hidden h-[70px] justify-between bg-white text-orange shadow-customDeep lg:flex lg:flex-row">
+            <div className="container mx-auto flex flex-row items-center justify-between">
               <div className="hidden lg:block">
                 <Link href="/doma">
                   <Image src={logo.src} alt="logo" height={90} width={300} />

@@ -32,7 +32,7 @@ const BurgerMenu = ({
       <section id="mobile" className="block lg:hidden">
         <div className="fixed inset-0 z-50 h-screen w-full overflow-y-scroll bg-orange xl:hidden">
           <div>
-            <nav className="flex flex-row h-[80px] items-center justify-between px-5 ">
+            <nav className="flex h-[80px] flex-row items-center justify-between px-5 ">
               <Link href="/home">
                 <Image
                   src={logo.src}
@@ -148,7 +148,7 @@ const BurgerMenu = ({
             </div>
           </div>
 
-          <div className=" mt-6 flex w-full font-bold cursor-pointer flex-row justify-end gap-x-4 pr-5 ">
+          <div className=" mt-6 flex w-full cursor-pointer flex-row justify-end gap-x-4 pr-5 font-bold ">
             <Button cta="Контакт" link="/kontakt" color="tertiary" />
           </div>
         </div>

@@ -13,14 +13,14 @@ function VideoHeroBlock({
 
   return (
     <div
-      className={`aspect-video pb-60 xs:pb-80 relative phoneLarge:pb-96 pt-40 w-full bg-darkGreen md:pb-0 md:pt-0`}
+      className={`relative  aspect-video w-full `}
     >
       {!isPhone && (
         <video
           autoPlay
           muted
           loop
-          className="absolute bottom-[9%] min-w-full min-h-full"
+          className="absolute min-h-full min-w-full"
         >
           <source
             src={findMediaUrl(video) ?? ""}
@@ -33,7 +33,7 @@ function VideoHeroBlock({
           autoPlay
           muted
           loop={false}
-          className="absolute right-0 bottom-0 min-w-full min-h-full"
+          className="absolute right-0 bottom-0 min-h-full min-w-full"
         >
           <source
             src={

@@ -16,7 +16,7 @@ import LeftImageRightTextBlock from "@blocks/LeftImageRightTextBlock/LeftImageRi
 import SpacingBlock from "@blocks/SpacingBlock/SpacingBlock";
 import TitleBlock from "@blocks/TitleBlock/TitleBlock";
 import DescriptionBlock from "@blocks/DescriptionBlock/DescriptionBlock";
-import BreadcrumbsBlock from "@blocks/BreadcrumbsBlock/BreadcrumbsBlock";
+// import BreadcrumbsBlock from "@blocks/BreadcrumbsBlock/BreadcrumbsBlock";
 import ImageBlock from "@blocks/ImageBlock/ImageBlock";
 import ContactFormBlock from "@blocks/ContactFormBlock/ContactFormBlock";
 import VideoHeroBlock from "@blocks/VideoHeroBlock/VideoHeroBlock";
@@ -124,13 +124,13 @@ export function Blocks({ singlePageData }: P) {
                   );
                   break;
 
-                case "ComponentBlocksBreadcrumbs":
-                  return (
-                    <React.Fragment key={`${i}block.__typename`}>
-                      <BreadcrumbsBlock page={singlePageData} />
-                    </React.Fragment>
-                  );
-                  break;
+                // case "ComponentBlocksBreadcrumbs":
+                //   return (
+                //     <React.Fragment key={`${i}block.__typename`}>
+                //       <BreadcrumbsBlock page={singlePageData} />
+                //     </React.Fragment>
+                //   );
+                //   break;
 
                 case "ComponentBlocksLeftImageRightText":
                   return (

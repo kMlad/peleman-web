@@ -10,31 +10,3 @@
 
 
 
-.bold-fix {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  text-decoration: none;
-}
-
-.bold-fix:hover {
-  font-weight: 700;
-}
-
-.bold-fix::after {
-  content: "";
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
-  user-select: none;
-  pointer-events: none;
-  font-weight: 700;
-
-  @media speech {
-    display: none;
-  }
-}
-
-

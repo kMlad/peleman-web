@@ -11,7 +11,7 @@ const FooterBlock = ({}): JSX.Element => {
     <section className="w-full bg-darkNavy px-4">
       <div className="container mx-auto flex w-full flex-col">
         <div className=" flex w-full flex-col items-center justify-between  py-[50px] md:flex-row ">
-          <Link href={"/home"} className="cursor-pointer">
+          <Link href={"/doma"} className="cursor-pointer">
             <Image
               unoptimized
               src={logo.src}
@@ -22,7 +22,7 @@ const FooterBlock = ({}): JSX.Element => {
             />
           </Link>
 
-          <div className="mt-10 md:text-right text-center  flex flex-col gap-y-2 text-lg font-extralight text-white md:-mb-16 md:mt-0">
+          <div className="mt-10 flex flex-col  gap-y-2 text-center text-lg font-extralight text-white md:-mb-16 md:mt-0 md:text-right">
             <div className=" text-[20px] font-semibold">
               <div>Помош и Поддршка</div>
             </div>
@@ -31,17 +31,15 @@ const FooterBlock = ({}): JSX.Element => {
             </div>
             <div>
               {" "}
-              <a href="#" target="_blank" rel="noopener noreferrer">
-              За Пелеман
-              </a>
+              <Link href={"/za-nas"}>За Пелеман</Link>
             </div>
             <div>
               {" "}
-              <Link href={"/knowledge-base"}>Сите производи</Link>
+              <Link href={"#"}>Сите производи</Link>
             </div>
             <div>
               {" "}
-              <Link href={"/knowledge-base"}>Peleman International</Link>
+              <Link href={"https://peleman.com"} target="_blank">Peleman International</Link>
             </div>
           </div>
         </div>

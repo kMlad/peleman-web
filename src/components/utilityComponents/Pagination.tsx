@@ -24,7 +24,7 @@ const Pagination = ({ totalEntries, limit, currentPage, setPage }: any) => {
         onClick={() => pageHandler(0)}
         className={`text-lg  ${
           currentPage !== 0
-            ? 'text-lightGreen text-lg font-medium'
+            ? 'text-lg font-medium text-darkNavy'
             : 'font-extrabold text-orange'
         }`}
       >
@@ -38,7 +38,7 @@ const Pagination = ({ totalEntries, limit, currentPage, setPage }: any) => {
           onClick={() => pageHandler(page)}
           className={`text-lg ${
             currentPage !== page
-              ? 'text-lightGreen text-lg font-medium'
+              ? 'text-lg font-medium text-darkNavy'
               : 'font-extrabold text-orange'
           }`}
         >
@@ -55,7 +55,7 @@ const Pagination = ({ totalEntries, limit, currentPage, setPage }: any) => {
           onClick={() => pageHandler(totalPages - 1)}
           className={`text-lg ${
             currentPage !== totalPages - 1
-              ? 'text-lightGreen text-lg font-medium'
+              ? 'text-lg font-medium text-darkNavy'
               : 'font-extrabold text-orange '
           }`}
         >

@@ -1,21 +1,6 @@
 import { HeaderData } from './MegaMenu';
 import MegaMenuicon from './assets/megaMenu.png';
-import whyUs from './assets/whyUs.png';
-import whoWeAre from './assets/whoWeAre.png';
-import meetTheTeam from './assets/meetTheTeam.png';
-import premiumWordPress from './assets/premiumWordPress.png';
-import agencyHosting from './assets/agencyHosting.png';
-import managedVPS from './assets/managedVPS.png';
-import jelastic from './assets/jelastic.png';
-import ehloMail from './assets/ehloMail.png';
-import cdn from './assets/cdn.png';
-import ssl from './assets/ssl.png';
-import domains from './assets/domains.png';
-import resources from './assets/resources.png';
-import userVoice from './assets/userVoice.png';
-import webTools from './assets/webTools.png';
-
-import whatToExpect from './assets/whatToExpect.png';
+import printer from '../../../assets/printer.svg'
 
 import arrowIcon from './assets/rightArrow.png';
 
@@ -26,32 +11,32 @@ export const headerData: HeaderData = {
       subitems: [
         {
           cta: 'Agency Wordpress Plans',
-          to: 'Learn more',
-          description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
           image: MegaMenuicon,
           icon: arrowIcon,
           link: '#',
         },
         {
           cta: 'Cloud VPS',
-          to: 'Learn more',
-          description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
           image: MegaMenuicon,
           icon: arrowIcon,
           link: '#',
         },
         {
           cta: 'eCommerce (Jelastic)',
-          to: 'Learn more',
-          description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
           image: MegaMenuicon,
           icon: arrowIcon,
           link: '#',
         },
         {
           cta: 'Business Email',
-          to: 'Learn more',
-          description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
           image: MegaMenuicon,
           icon: arrowIcon,
           link: '#',
@@ -63,7 +48,7 @@ export const headerData: HeaderData = {
       subitems: [
         {
           cta: 'Application Hosting',
-          to: 'Learn more',
+          to: 'Дознај повеќе',
           description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
           image: MegaMenuicon,
           icon: arrowIcon,
@@ -71,7 +56,7 @@ export const headerData: HeaderData = {
         },
         {
           cta: 'Cloud VPS',
-          to: 'Learn more',
+          to: 'Дознај повеќе',
           description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
           image: MegaMenuicon,
           icon: arrowIcon,
@@ -82,8 +67,8 @@ export const headerData: HeaderData = {
   ],
 
   navLinks: [
-    { name: 'Дома', href: 'linkHome', current: false, newTab: false },
-    { name: 'За нас', href: 'linkHome', current: false, newTab: false },
+    { name: 'Дома', href: '/doma', current: false, newTab: false },
+    { name: 'За нас', href: '/za-nas', current: false, newTab: false },
     {
       name: 'Производи',
       href: 'linkProducts',
@@ -105,38 +90,38 @@ export const headerDataSolutions: HeaderData = {
       name: 'Solutions',
       subitems: [
         {
-          cta: 'Premium WordPress Hosting',
-          to: 'Learn more',
-          description: 'The all-in-one package for top-perfoming agencies',
-          image: premiumWordPress,
+          cta: 'Печатници',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/premium-wordpress-hosting',
+          link: '#',
         },
         {
-          cta: 'Agency Hosting',
-          to: 'Learn more',
-          description: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum',
-          image: agencyHosting,
+          cta: 'Човечки ресурси',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/agency-hosting',
+          link: '#',
         },
         {
-          cta: 'Managed VPS',
-          to: 'Learn more',
+          cta: 'Угостителство',
+          to: 'Дознај повеќе',
           description:
-            'Your website. Your data. Your apps. Hosted by cloud experts',
-          image: managedVPS,
+            'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/managed-vps',
+          link: '#',
         },
         {
-          cta: 'Jelastic Wordpress Hosting',
-          to: 'Learn more',
+          cta: 'Финансии',
+          to: 'Дознај повеќе',
           description:
-            'Save money by easily meeting the evolving demands of your customers',
-          image: jelastic,
+            'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/jelastic-wordpress-hosting',
+          link: '#',
         },
       ],
     },
@@ -149,38 +134,38 @@ export const headerDataAdditionalProducts: HeaderData = {
       name: 'AdditionalProducts',
       subitems: [
         {
-          cta: 'EhloMail',
-          to: 'Learn more',
+          cta: 'За документи',
+          to: 'Дознај повеќе',
           description:
-            'Cloud-based email collaboration, backed by our team of experts',
-          image: ehloMail,
+            'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/ehlo-mail',
+          link: '#',
         },
         {
-          cta: 'CDN',
-          to: 'Learn more',
+          cta: 'За фотографии',
+          to: 'Дознај повеќе',
           description:
-            'End the struggle against your clients’ clueless hosting provider',
-          image: cdn,
+            'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/cdn-waf',
+          link: '#',
         },
         {
-          cta: 'SSL',
-          to: 'Learn more',
-          description: 'Protect your customers with a Layershift SSL',
-          image: ssl,
+          cta: 'Персонализација',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/ssl-certificates',
+          link: '#',
         },
         {
-          cta: 'Domains',
-          to: 'Learn more',
-          description: 'Tell the world who you are with a .com TLD domain',
-          image: domains,
+          cta: 'Машини за печатење',
+          to: 'Дознај повеќе',
+          description: 'Лорем Ипусм е едноставно лажен текст на индустријата за печатење',
+          image: printer,
           icon: arrowIcon,
-          link: '/domains',
+          link: '#',
         },
       ],
     },

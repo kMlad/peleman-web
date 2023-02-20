@@ -29,6 +29,7 @@ const HeroBlockQuery = `
     id
     cta
     link
+    color
     __typename
     }
 }
