@@ -5,7 +5,10 @@ import { GoogleAnalytics } from "nextjs-google-analytics";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GoogleAnalytics trackPageViews gaMeasurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}/>
+      <GoogleAnalytics
+        trackPageViews
+        gaMeasurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}
+      />
       <Component {...pageProps} />
     </>
   );
