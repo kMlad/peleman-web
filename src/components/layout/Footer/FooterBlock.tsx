@@ -8,23 +8,22 @@ import Link from "next/link";
 
 const FooterBlock = ({}): JSX.Element => {
   return (
-    <section className="w-full bg-darkNavy px-4">
+    <section className="w-full bg-darkNavy">
       <div className="container mx-auto flex w-full flex-col">
-        <div className=" flex w-full flex-col items-center justify-between  py-[50px] md:flex-row ">
-          <Link href={"/doma"} className="cursor-pointer">
+        <div className="flex w-full flex-col items-center justify-between  py-[50px] md:flex-row">
+          <Link href={"/doma"} className="cursor-pointer pl-5">
             <Image
               unoptimized
               src={logo.src}
               alt=" logo"
               width={110}
               height={109.36}
-              className=" cursor-pointer"
             />
           </Link>
 
           <div className="mt-10 flex flex-col  gap-y-2 text-center text-lg font-extralight text-white md:-mb-16 md:mt-0 md:text-right">
             <div className=" text-[20px] font-semibold">
-              <div>Помош и Поддршка</div>
+              <div>Помош и <br/> Поддршка</div>
             </div>
             <div>
               <Link href={"/kontakt"}>Контакт</Link>

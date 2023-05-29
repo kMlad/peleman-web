@@ -144,7 +144,7 @@ const ContactFormBlock = ({
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.name}
-                      className="my-2 ml-0 w-full border-2 border-darkNavy bg-lightNavy py-3  pl-4 text-sm text-white outline-orange placeholder:text-white placeholder:text-opacity-80 md:mb-1"
+                      className="my-2 ml-0 w-full rounded-md border-2 border-darkNavy bg-lightBlue py-3  pl-4 text-sm text-lightNavy outline-orange placeholder:text-lightNavy placeholder:text-opacity-80 md:mb-1"
                     />
                     {formik.errors.name ? (
                       <p className="absolute -bottom-5 left-0 mt-1 text-xs text-[#dc2626]">
@@ -161,7 +161,7 @@ const ContactFormBlock = ({
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
                       value={formik.values.email}
-                      className=" ml-0 mb-2 mt-10 w-full border-2 border-darkNavy  bg-lightNavy py-3 pl-4 text-sm text-white outline-orange placeholder:text-white placeholder:text-opacity-80 "
+                      className="ml-0 mb-2 mt-10 w-full rounded-md border-2 border-darkNavy  bg-lightBlue py-3 pl-4 text-sm text-lightNavy outline-orange placeholder:text-lightNavy placeholder:text-opacity-80 "
                     />
                     {formik.errors.email ? (
                       <p className="absolute -bottom-4 left-0 mt-1 text-xs text-[#dc2626]">
@@ -180,7 +180,7 @@ const ContactFormBlock = ({
                       value={formik.values.message}
                       cols={12}
                       rows={7}
-                      className="ml-0 mb-2  mt-10 w-full border-2 border-darkNavy bg-lightNavy p-3 pl-4 text-sm text-white  outline-orange placeholder:text-white placeholder:text-opacity-80"
+                      className="ml-0 mb-2 mt-10  w-full rounded-md border-2 border-darkNavy bg-lightBlue p-3 pl-4 text-sm text-lightNavy  outline-orange placeholder:text-lightNavy placeholder:text-opacity-80"
                     />
                   </div>
                   {formik.errors.message ? (
@@ -192,7 +192,7 @@ const ContactFormBlock = ({
                   <button
                     type="submit"
                     disabled={isSubmitted}
-                    className="mt-10 flex  w-full min-w-[180px] shrink-0   cursor-pointer justify-center bg-darkNavy py-2 px-16 text-center text-2xl font-bold text-white transition duration-200 hover:bg-orange sm:w-auto sm:self-center"
+                    className="mt-10 flex w-full  min-w-[180px] shrink-0 cursor-pointer   justify-center rounded-md bg-darkNavy py-2 px-16 text-center text-2xl font-bold text-white transition duration-200 hover:bg-orange sm:w-auto sm:self-center"
                   >
                     {buttonCta}
                   </button>
@@ -204,7 +204,7 @@ const ContactFormBlock = ({
       )}
       {showThankYou && (
         <div
-          className=" relative block bg-lightNavy bg-cover bg-center bg-no-repeat pt-60 pb-80 text-white "
+          className=" relative block bg-white bg-cover bg-center bg-no-repeat pt-60 pb-80 text-lightNavy "
           ref={ref}
         >
           <div className="container mx-auto flex flex-col   items-center  justify-center pt-20 text-center">
@@ -221,7 +221,7 @@ const ContactFormBlock = ({
               /> */}
             </div>
             <p
-              className={`relative mb-10 text-[24px] font-bold text-white  ${
+              className={`relative mb-10 text-[24px] font-bold text-lightNavy  ${
                 inView ? "fade-in-left" : ""
               }`}
               style={{ maxWidth: "60%" }}
@@ -229,7 +229,7 @@ const ContactFormBlock = ({
               Вашата порака е успешно испратена!{" "}
             </p>
             <div
-              className={`  prose px-4 text-[16px] text-white prose-p:my-0 prose-p:text-white sm:px-0 lg:prose-p:my-0 	 ${
+              className={`  prose px-4 text-[16px] text-lightNavy prose-p:my-0 prose-p:text-lightNavy sm:px-0 lg:prose-p:my-0 	 ${
                 inView ? "fade-in-bottom" : ""
               }`}
             >

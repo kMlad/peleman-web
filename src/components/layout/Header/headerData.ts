@@ -75,12 +75,12 @@ export const headerData: HeaderData = {
       current: false,
       newTab: false,
     },
-    {
-      name: 'Индустрии',
-      href: 'linkServices',
-      current: false,
-      newTab: false,
-    },
+    // {
+    //   name: 'Индустрии',
+    //   href: 'linkServices',
+    //   current: false,
+    //   newTab: false,
+    // },
   ],
 };
 

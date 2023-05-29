@@ -16,6 +16,7 @@ import menu from "../../../assets/burger-white.svg";
 import logoWhite from "../../../assets/logo-small-white.svg";
 import logo from "../../../assets/logo-big.png";
 import Button from "@components/Button";
+import { useRouter } from "next/router";
 
 interface P {
   currentSlug: string;
@@ -34,6 +35,8 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
   const handleMegaMenuClose = useCallback(() => {
     setMegaMenuShow(null);
   }, []);
+
+  const { slug } = useRouter().query;
 
   return (
     <>
@@ -86,14 +89,17 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
               >
                 {headerData.navLinks?.map((link) => (
                   <span key={Math.random()}>
-                    {link.name !== "Производи" &&
-                      link.name !== "Индустрии" && (
-                        <span className="hover:font-bold ">
-                          <Link key={link.name} href={link.href}>
-                            {link.name}
-                          </Link>
-                        </span>
-                      )}
+                    {link.name !== "Производи" && link.name !== "Индустрии" && (
+                      <span
+                        className={`hover:font-bold ${
+                          slug?.includes(link.href.substring(1)) && "font-bold"
+                        }`}
+                      >
+                        <Link key={link.name} href={link.href}>
+                          {link.name}
+                        </Link>
+                      </span>
+                    )}
 
                     {link.name === "Производи" && (
                       <button
@@ -178,8 +184,6 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
             closeMegaMenu={handleMegaMenuClose}
           />
         )}
-        
-        
       </div>
     </>
   );

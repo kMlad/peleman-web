@@ -25,6 +25,7 @@ module.exports = {
       grey: '#ADADAD',
       formDarkPink: '#D73B5F',
       formLightPink: '#FF6C8E',
+      lightBlue: "#f0efff"
     },
     screens: {
       smallest: '320px',
