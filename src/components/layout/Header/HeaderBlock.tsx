@@ -14,7 +14,7 @@ import headerData, {
 } from "./headerData";
 import menu from "../../../assets/burger-white.svg";
 import logoWhite from "../../../assets/logo-small-white.svg";
-import logo from "../../../assets/logo-big.png";
+import logo from "../../../assets/new-logo.png";
 import Button from "@components/Button";
 
 interface P {
@@ -75,9 +75,9 @@ function HeaderBlock({ currentSlug }: P): JSX.Element {
           </div>
           <div className="hidden h-[70px] justify-between bg-white text-orange shadow-customDeep lg:flex lg:flex-row">
             <div className="container mx-auto flex flex-row items-center justify-between">
-              <div className="hidden lg:block">
-                <Link href="/doma">
-                  <Image src={logo.src} alt="logo" height={90} width={300} />
+              <div className="hidden my-4 lg:block">
+                <Link href="/doma" >
+                  <Image src={logo.src} alt="logo" height={1} width={240} />
                 </Link>
               </div>
               <div

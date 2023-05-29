@@ -41,7 +41,7 @@ const MegaMenu = ({ categories, closeMegaMenu }: P): JSX.Element => {
     <>
       <section
         id="desktop"
-        className={`absolute z-50 hidden w-full bg-darkNavy  text-white md:block `}
+        className={`absolute z-50 hidden w-full bg-orange  text-white md:block `}
       >
         <div className="container mx-auto mt-4 flex w-full justify-end">
           <button onClick={closeMegaMenu}>
