@@ -14,7 +14,8 @@ import headerData, {
 } from "./headerData";
 import menu from "../../../assets/burger-white.svg";
 import logoWhite from "../../../assets/logo-small-white.svg";
-import logo from "../../../assets/logo-big.png";
+// import logo from "../../../assets/logo-big.png";
+import logo from "../../../assets/gago.svg";
 import Button from "@components/Button";
 import { useRouter } from "next/router";
 

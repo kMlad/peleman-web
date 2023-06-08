@@ -1,8 +1,8 @@
-import React from 'react';
-import Button from '../../components/Button';
-import findMediaUrl from '../../../utils/findMediaUrl';
-import { ComponentBlocksHero } from '@utils/types';
-import ReactMarkdown from 'react-markdown';
+import React from "react";
+import Button from "../../components/Button";
+import findMediaUrl from "../../../utils/findMediaUrl";
+import { ComponentBlocksHero } from "@utils/types";
+import ReactMarkdown from "react-markdown";
 
 function HeroBlock({
   size,
@@ -12,14 +12,17 @@ function HeroBlock({
   smallTitle,
   button,
 }: ComponentBlocksHero): JSX.Element {
-  let style = '';
+  let style = "";
 
   switch (size) {
-    case 'large':
+    case "large":
       style = `relative lg:h-[610px]  py-5 sm:h-full h-[351px]  sm:px-[40px] lg:pt-[120px]  h-full  w-full bg-cover bg-center bg-no-repeat`;
       break;
-    case 'small':
+    case "medium":
       style = `relative xl:h-[550px] py-16  sm:px-[40px] sm:h-full h-[433px] h-full  w-full bg-cover bg-center bg-no-repeat `;
+      break;
+    case "small":
+      style = `relative xl:h-[400px] py-16  sm:px-[20px] sm:h-full h-[300px] h-full  w-full bg-cover bg-center bg-no-repeat `;
       break;
 
     default:
@@ -30,11 +33,10 @@ function HeroBlock({
     <div
       className={style}
       style={{
-        backgroundImage: `url('${
-          findMediaUrl(heroImage)
-        }')`,
+        backgroundImage: `url('${findMediaUrl(heroImage)}')`,
       }}
-    ><div className='absolute inset-0 z-10 bg-lightNavy opacity-30'/>
+    >
+      <div className="absolute inset-0 z-10 bg-lightNavy opacity-30" />
       <div className="container mx-auto  flex flex-col sm:mt-0  ">
         <div className="z-20 text-base font-light text-white  sm:mt-16">
           {smallTitle}
@@ -52,7 +54,7 @@ function HeroBlock({
           {button?.cta && (
             <Button
               color={button.color}
-              link={button.link ?? '#'}
+              link={button.link ?? "#"}
               cta={button.cta}
             />
           )}

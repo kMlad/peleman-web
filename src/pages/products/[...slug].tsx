@@ -1,16 +1,16 @@
-import client from "../utils/apollo-client";
-import { GET_ALL_PAGES, GET_ALL_BLOGS } from "../utils/queries";
-import { ComponentUtilSeo, PageEntity, Query } from "../utils/types";
-import Blocks from "@utilityComponents/Blocks";
+import client from "../../utils/apollo-client";
+import { GET_ALL_PRODUCTS } from "../../utils/queries";
+import { Query, ProductEntity, ComponentUtilSeo } from "../../utils/types";
 import Layout from "@layout/Layout/Layout";
 import React, { useState } from "react";
+import ProductPageBlock from "@blocks/ProductPageBlock/ProductPageBlock";
 
 interface Params {
   params: { slug: string };
 }
 
 interface P {
-  pageData: PageEntity[];
+  pageData: ProductEntity[];
   //   blogData: BlogEntity[];
 }
 
@@ -20,14 +20,14 @@ interface ApiResponse {
 
 export async function getStaticPaths() {
   const { data }: ApiResponse = (await client.query({
-    query: GET_ALL_PAGES,
+    query: GET_ALL_PRODUCTS,
   })) as ApiResponse;
 
-  const allPages = data.pages?.data;
+  const allProducts = data.products?.data;
 
-  const paths = allPages?.map((page) => {
+  const paths = allProducts?.map((product) => {
     return {
-      params: { slug: [page.attributes?.slug] },
+      params: { slug: [product.attributes?.slug ?? null] },
     };
   });
 
@@ -38,15 +38,15 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: Params) {
-  let pageData: PageEntity[] | undefined;
+  let pageData: ProductEntity[] | undefined;
 
   try {
     const res = (await client.query({
-      query: GET_ALL_PAGES,
+      query: GET_ALL_PRODUCTS,
       fetchPolicy: "no-cache",
     })) as ApiResponse;
 
-    pageData = res.data.pages?.data.filter(
+    pageData = res.data.products?.data.filter(
       (page) => page.attributes?.slug === params.slug[0]
     );
   } catch (e) {
@@ -69,7 +69,9 @@ function Page({ pageData }: P) {
     <>
       <Layout seo={singlePageData.attributes?.seo as ComponentUtilSeo}>
         {/* <div className="bg-orange">{singlePageData.attributes?.title}</div> */}
-        <Blocks singlePageData={singlePageData} />
+        {singlePageData.attributes && (
+          <ProductPageBlock product={singlePageData.attributes} />
+        )}
       </Layout>
     </>
   );
