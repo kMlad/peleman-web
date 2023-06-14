@@ -27,7 +27,7 @@ function AccordionArrowItem({
     <div className="w-full">
       <div className="mb-[5px] py-[10px]">
         <div className="flex  justify-items-center ">
-          <h3 className="pr-[10px] text-[20px] text-orange sm:text-[24px]">
+          <h3 className="pr-[10px] text-[20px] text-secondary sm:text-[24px]">
             <button
               onClick={btnOnClick}
               className="flex flex-row items-center justify-center gap-5 text-left font-semibold"

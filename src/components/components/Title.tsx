@@ -22,7 +22,7 @@ function Title({ cta, alignment, fontSize }: P): JSX.Element {
             : fontSize === 'Small'
             ? 'text-[22px] sm:text-[28px]'
             : 'text-[36px] sm:text-[42px]'
-        } font-bold text-orange`}
+        } font-bold text-secondary`}
       >
         {cta}
       </h2>

@@ -69,7 +69,7 @@ function CheckListItem({
             className={`${
               checking === 'empty'
                 ? `${
-                    theme === 'secondary' ? 'text-lightNavy' : 'text-darkGrey'
+                    theme === 'secondary' ? 'text-primaryLight' : 'text-darkGrey'
                   }  font-bold`
                 : 'text-darkGrey'
             } text-left text-[26px] `}
@@ -80,8 +80,8 @@ function CheckListItem({
             <hr
               className={`${
                 theme === 'secondary'
-                  ? 'border-t-[6px] border-orange'
-                  : 'border-t-[6px] text-darkNavy'
+                  ? 'border-t-[6px] border-secondary'
+                  : 'border-t-[6px] text-primary'
               }  `}
             />
           )}

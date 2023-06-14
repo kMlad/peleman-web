@@ -25,7 +25,7 @@ function SmallPricing({
         <div className="text-center text-[26px] font-bold text-darkGrey">
           {title}
         </div>
-        <div className="text-[55px] font-bold text-darkNavy">
+        <div className="text-[55px] font-bold text-primary">
           {value === 'dollar'
             ? '$'
             : value === 'euro'

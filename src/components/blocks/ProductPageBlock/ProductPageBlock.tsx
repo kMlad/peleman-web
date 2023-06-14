@@ -32,7 +32,7 @@ const ProductPageBlock = ({ product }: P): JSX.Element => {
             })}
           </Carousel>
         </div>
-        <div className="h-full w-full bg-lightNavy">
+        <div className="h-full w-full bg-primaryLight">
           <ReactMarkdown>{productDescription}</ReactMarkdown>
         </div>
       </section>

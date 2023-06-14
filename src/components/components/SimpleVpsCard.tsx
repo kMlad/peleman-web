@@ -82,7 +82,7 @@ function SimpleVpsCard({
                     setDropdown(false);
                     setConfigState(index);
                   }}
-                  className="block h-10 w-full cursor-pointer bg-white py-2 px-4 text-base font-semibold text-black hover:text-orange"
+                  className="block h-10 w-full cursor-pointer bg-white py-2 px-4 text-base font-semibold text-black hover:text-secondary"
                   key={index}
                 >
                   {dataItem}

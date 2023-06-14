@@ -30,7 +30,7 @@ const BurgerMenu = ({
   return (
     <>
       <section id="mobile" className="block lg:hidden">
-        <div className="fixed inset-0 z-50 h-screen w-full overflow-y-scroll bg-orange xl:hidden">
+        <div className="fixed inset-0 z-50 h-screen w-full overflow-y-scroll bg-secondary xl:hidden">
           <div>
             <nav className="flex h-[80px] flex-row items-center justify-between px-5 ">
               <Link href="/home">

@@ -33,7 +33,7 @@ function TabPricingCard({ data }: P): JSX.Element {
                 key={idx}
                 className={`${
                   idx === activeTab
-                    ? 'cursor-pointer rounded-t-xl bg-lightNavy/10 py-7 font-normal   text-orange md:text-2xl'
+                    ? 'bg-primaryLight/10 cursor-pointer rounded-t-xl py-7 font-normal   text-secondary md:text-2xl'
                     : 'cursor-pointer rounded-t-xl bg-white py-7 font-normal   text-darkGrey md:text-2xl'
                 } w-full`}
               >
@@ -96,7 +96,7 @@ function TabPricingCard({ data }: P): JSX.Element {
                       <p
                         key={idx}
                         className={`${
-                          idx === activeTab ? 'text-lightNavy' : 'hidden'
+                          idx === activeTab ? 'text-primaryLight' : 'hidden'
                         }`}
                       >
                         {item.value === 'dollar'
@@ -112,7 +112,7 @@ function TabPricingCard({ data }: P): JSX.Element {
                       <p
                         key={idx}
                         className={`${
-                          idx === activeTab ? 'text-pink' : 'hidden'
+                          idx === activeTab ? 'text-primary' : 'hidden'
                         }`}
                       >
                         {item.value === 'dollar'
@@ -156,7 +156,7 @@ function TabPricingCard({ data }: P): JSX.Element {
                 </p>
               </div>
               <div>
-                <p className="mb-5  text-center text-lg font-bold text-lightNavy">
+                <p className="mb-5  text-center text-lg font-bold text-primaryLight">
                   {data.map((item, idx) => (
                     <p
                       key={idx}

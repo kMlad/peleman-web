@@ -32,7 +32,7 @@ function Resources({ data }: P): JSX.Element {
                 key={idx}
                 className={`${
                   idx === activeTab
-                    ? 'bg-lightNavy/10 font-semibold text-orange'
+                    ? 'bg-primaryLight/10 font-semibold text-secondary'
                     : 'bg-white font-normal text-darkGrey'
                 }  w-full cursor-pointer rounded-t-xl py-5 px-2 text-base md:px-5 md:text-xl`}
               >
@@ -42,7 +42,7 @@ function Resources({ data }: P): JSX.Element {
           </div>
 
           <div className="flex flex-col items-center">
-            <div className="m-auto min-h-[226px] w-[19rem]  rounded-b-2xl bg-lightNavy/10 py-5  md:w-[35.125rem]">
+            <div className="m-auto min-h-[226px] w-[19rem]  rounded-b-2xl bg-primaryLight/10 py-5  md:w-[35.125rem]">
               <div className="my-7 text-center text-2xl font-normal">
                 {data.map(
                   (item, idx) =>

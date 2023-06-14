@@ -68,7 +68,7 @@ function Page({ pageData }: P) {
   return (
     <>
       <Layout seo={singlePageData.attributes?.seo as ComponentUtilSeo}>
-        {/* <div className="bg-orange">{singlePageData.attributes?.title}</div> */}
+        {/* <div className="bg-secondary">{singlePageData.attributes?.title}</div> */}
         <Blocks singlePageData={singlePageData} />
       </Layout>
     </>

@@ -12,7 +12,7 @@ function MarqueeBlock({ title, logos }: ComponentBlocksMarquee): JSX.Element {
   return (
     <>
       <div className="relative my-10 flex max-h-[273px] flex-col items-center overflow-x-hidden">
-        <h3 className=" my-10 text-3xl font-semibold text-orange">{title}</h3>
+        <h3 className=" my-10 text-3xl font-semibold text-secondary">{title}</h3>
         <Marquee speed={60} className="flex  flex-row">
           {logos?.data.map((logoItem, index) => (
             <div

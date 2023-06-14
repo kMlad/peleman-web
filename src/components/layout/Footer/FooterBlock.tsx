@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const FooterBlock = ({}): JSX.Element => {
   return (
-    <section className="w-full bg-darkNavy">
+    <section className="w-full bg-primary">
       <div className="container mx-auto flex w-full flex-col">
         <div className="flex w-full flex-col items-center justify-between  py-[50px] md:flex-row">
           <Link href={"/doma"} className="cursor-pointer pl-5">

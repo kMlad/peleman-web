@@ -36,7 +36,7 @@ function RegistrationCard({ data }: P): JSX.Element {
               key={idx}
               className={`${
                 idx === activeTab
-                  ? 'cursor-pointer rounded-t-xl bg-lightNavy/10 py-10   font-bold text-orange md:text-2xl'
+                  ? 'cursor-pointer rounded-t-xl bg-primaryLight/10 py-10   font-bold text-secondary md:text-2xl'
                   : 'cursor-pointer rounded-t-xl bg-white py-10   font-medium text-darkGrey md:text-2xl'
               } w-full`}
             >
@@ -46,7 +46,7 @@ function RegistrationCard({ data }: P): JSX.Element {
         </div>
 
         <div className="flex flex-col items-center">
-          <div className="w-[340px] rounded-b-2xl  bg-lightNavy/10 py-4 md:w-[390px]">
+          <div className="w-[340px] rounded-b-2xl  bg-primaryLight/10 py-4 md:w-[390px]">
             <div className="flex flex-col items-center">
               <div className="flex flex-row ">
                 <button
@@ -72,7 +72,7 @@ function RegistrationCard({ data }: P): JSX.Element {
                                   setActiveDropdownItem(index);
                                   setDropdown(false);
                                 }}
-                                className="flex cursor-pointer justify-center bg-white p-3 text-center text-base text-darkGrey hover:text-orange"
+                                className="flex cursor-pointer justify-center bg-white p-3 text-center text-base text-darkGrey hover:text-secondary"
                                 key={index}
                               >
                                 {dropdownItem.option}
@@ -87,13 +87,13 @@ function RegistrationCard({ data }: P): JSX.Element {
             </div>
 
             <p className="mt-2 text-center text-base font-normal text-darkGrey">
-              <span className=" text-base text-lightNavy">*</span> Registration
+              <span className=" text-base text-primaryLight">*</span> Registration
               restrictions apply
             </p>
             <p className="  mt-12 text-center text-base font-normal text-darkGrey">
               Price per year
             </p>
-            <p className="text-center text-[55px] font-bold text-darkNavy">
+            <p className="text-center text-[55px] font-bold text-primary">
               {data.map((item, idx) => (
                 <p key={idx} className={`${idx === activeTab ? '' : 'hidden'}`}>
                   {item.dropdownOptions[activeDropdownItem].currency ===
@@ -113,7 +113,7 @@ function RegistrationCard({ data }: P): JSX.Element {
             <p className="  mt-12 text-center text-base font-normal text-darkGrey">
               Registration period
             </p>
-            <p className=" flex flex-row justify-center text-center text-[50px] font-bold text-lightNavy">
+            <p className=" flex flex-row justify-center text-center text-[50px] font-bold text-primaryLight">
               {data.map((item, idx) => (
                 <p key={idx} className={`${idx === activeTab ? '' : 'hidden'}`}>
                   {item.dropdownOptions[activeDropdownItem].period}

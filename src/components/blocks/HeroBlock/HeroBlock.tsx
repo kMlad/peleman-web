@@ -36,7 +36,7 @@ function HeroBlock({
         backgroundImage: `url('${findMediaUrl(heroImage)}')`,
       }}
     >
-      <div className="absolute inset-0 z-10 bg-lightNavy opacity-30" />
+      <div className="absolute inset-0 z-10 bg-primaryLight opacity-30" />
       <div className="container mx-auto  flex flex-col sm:mt-0  ">
         <div className="z-20 text-base font-light text-white  sm:mt-16">
           {smallTitle}

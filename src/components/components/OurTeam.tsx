@@ -60,7 +60,7 @@ function OurTeam({
             <div className=" max-w-[100%] text-center text-sm font-light text-darkGrey md:text-left lg:text-left lg:text-[18px] lg:leading-6">
               <ReactMarkdown>{testimonialDesc}</ReactMarkdown>
             </div>
-            <div className="text-center font-normal text-darkGrey prose-p:text-[18px] prose-strong:text-[22px] prose-strong:font-semibold prose-strong:text-orange lg:text-left">
+            <div className="text-center font-normal text-darkGrey prose-p:text-[18px] prose-strong:text-[22px] prose-strong:font-semibold prose-strong:text-secondary lg:text-left">
               <ReactMarkdown>{ceo}</ReactMarkdown>
             </div>
           </div>

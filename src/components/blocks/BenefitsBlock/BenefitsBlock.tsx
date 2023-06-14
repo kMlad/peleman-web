@@ -14,7 +14,7 @@ function BenefitsBlock({
     <>
       <div className="container mx-auto  flex flex-col justify-between px-4 lg:flex-row ">
         <div className="-mt-32 w-[45%] lg:basis-[12%]">
-          <div className=" w-full text-[26px] font-thin text-orange prose-strong:font-bold md:text-[32px]">
+          <div className=" w-full text-[26px] font-thin text-secondary prose-strong:font-bold md:text-[32px]">
             <ReactMarkdown>{title}</ReactMarkdown>
           </div>
         </div>

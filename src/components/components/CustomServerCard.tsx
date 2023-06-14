@@ -17,7 +17,7 @@ function CustomServerCard({
 }: P): JSX.Element {
   return (
     <div className="flex !h-full flex-col items-center">
-      <div className="flex !h-full w-[19rem] flex-col justify-between rounded-2xl bg-orange px-11 py-7 shadow-custom">
+      <div className="flex !h-full w-[19rem] flex-col justify-between rounded-2xl bg-secondary px-11 py-7 shadow-custom">
         <p className="text-center text-3xl font-bold text-white">{title}</p>
         <div className="my-16 text-center text-[18px] font-thin text-white">
           <ReactMarkdown>{description}</ReactMarkdown>

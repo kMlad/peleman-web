@@ -10,11 +10,11 @@ function CenteredDescription({ cta, alignment }: P): JSX.Element {
     <div
       className={` ${
         alignment === 'right'
-          ? 'text-right font-semibold text-lightNavy'
+          ? 'text-right font-semibold text-primaryLight'
           : alignment === 'left'
-          ? ' text-left font-semibold  text-lightNavy'
+          ? ' text-left font-semibold  text-primaryLight'
           : alignment === 'blog'
-          ? 'text-center font-semibold text-orange'
+          ? 'text-center font-semibold text-secondary'
           : 'py-2 text-center font-thin text-[#2C2933]  xl:px-[210px] '
       }  text-xl md:text-[28px]`}
     >

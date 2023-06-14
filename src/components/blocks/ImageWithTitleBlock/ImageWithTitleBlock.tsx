@@ -18,7 +18,7 @@ function ImageWithTitleBlock({
           width={image?.data?.attributes?.width ?? 107}
         />
       </div>
-      <ReactMarkdown className=" max-w-[780px]  text-center text-xl prose-strong:text-orange sm:text-[32px]">
+      <ReactMarkdown className=" max-w-[780px]  text-center text-xl prose-strong:text-secondary sm:text-[32px]">
         {title ?? ''}
       </ReactMarkdown>
     </div>

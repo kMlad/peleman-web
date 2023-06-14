@@ -24,7 +24,7 @@ function PricingCardTest({
     <div className=" mb-10 flex flex-col items-center  px-10">
       <div className="h-[790px] w-[314px]  rounded-2xl bg-white p-4 md:w-[364px]">
         <p className="text-center text-2xl font-bold">{title}</p>
-        <p className="text-center text-[35px] font-extrabold text-lightNavy">
+        <p className="text-center text-[35px] font-extrabold text-primaryLight">
           {description}
           <span className="text-sm text-grey">{secondDescription}</span>
         </p>

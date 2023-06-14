@@ -21,7 +21,7 @@ function PricingCard({
     <div className="flex flex-col items-center">
       <div className="w-[314px] rounded-2xl  bg-white p-4 shadow-custom md:w-[304px]">
         <p className="mb-4 mt-7 text-center text-2xl font-bold">{title}</p>
-        <p className="text-center text-[55px] font-extrabold text-lightNavy">
+        <p className="text-center text-[55px] font-extrabold text-primaryLight">
           {description}
         </p>
         <div className="mx-3 space-y-4 py-10 text-base">

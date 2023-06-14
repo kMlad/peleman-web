@@ -11,7 +11,7 @@ interface P {
 
 function CallToActionBlock({ buttons, title, description }: ComponentBlocksCallToAction): JSX.Element {
   return (
-    <div className="h-full w-full bg-darkNavy sm:py-0">
+    <div className="h-full w-full bg-primary sm:py-0">
       <div className="container mx-auto flex flex-col justify-between gap-y-5 py-14 sm:gap-y-0 md:flex-row">
         <div className="basis-1/2">
           <h3 className=" text-2xl text-white  sm:text-3xl ">{title}</h3>

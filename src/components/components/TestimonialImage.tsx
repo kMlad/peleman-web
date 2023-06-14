@@ -31,7 +31,7 @@ function TestimonialImage({
   const isDesktopOrTablet = useMediaQuery({ minWidth: 950 });
   const isMobile = useMediaQuery({ maxWidth: 950 });
   return (
-    <div className="flex h-[676px] bg-orange text-left sm:h-[450px]">
+    <div className="flex h-[676px] bg-secondary text-left sm:h-[450px]">
       {!bigImage?.data?.attributes?.mime.includes('') ? (
         <div className="m-auto flex max-w-[80%] flex-col place-self-center sm:max-w-[90%]">
           <div className="m-auto max-w-[90%]">

@@ -25,7 +25,7 @@ function FileComponent({ title, link }: P): JSX.Element {
           passHref
         >
           <a
-            className="text-left text-lg  font-medium text-lightNavy"
+            className="text-left text-lg  font-medium text-primaryLight"
             href={link}
             target="_blank"
             rel="noreferrer"

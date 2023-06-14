@@ -33,7 +33,7 @@ function Benefit({ title, description, image, alignment }: P): JSX.Element {
               : alignment === 'left'
               ? 'text-left'
               : 'text-center'
-          }   text-[24px] font-semibold leading-tight text-orange sm:text-[24px]`}
+          }   text-[24px] font-semibold leading-tight text-secondary sm:text-[24px]`}
         >
           {title}
         </h3>

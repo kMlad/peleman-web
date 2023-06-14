@@ -17,8 +17,8 @@ function CustomPlanCardTest({
 }: P): JSX.Element {
   return (
     <div className="  flex flex-col items-center pl-7">
-      <div className=" shadow h-[790px] w-[314px]  rounded-2xl bg-orange p-4 md:w-[364px]">
-        <p className="  mb-64 mt-2 text-center text-2xl font-bold text-lightNavy">
+      <div className=" shadow h-[790px] w-[314px]  rounded-2xl bg-secondary p-4 md:w-[364px]">
+        <p className="  mb-64 mt-2 text-center text-2xl font-bold text-primaryLight">
           {title}
         </p>
         <p className="text-center  text-xl font-thin text-white">

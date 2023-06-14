@@ -36,7 +36,7 @@ function ServerCard({
             {title}
           </p>
           <div className="flex justify-center text-center">
-            <div className="text-5xl font-bold text-darkNavy">
+            <div className="text-5xl font-bold text-primary">
               {valuta === 'dollar'
                 ? '$'
                 : valuta === 'euro'
@@ -46,7 +46,7 @@ function ServerCard({
                 : ' '}{' '}
               {monthPrice}
             </div>
-            <div className="self-end text-lg text-darkGrey/70">/month</div>
+            <div className="text-darkGrey/70 self-end text-lg">/month</div>
           </div>
           <div className="flex justify-center text-center">
             <div className="text-2xl font-bold text-darkGrey">
@@ -81,7 +81,7 @@ function ServerCard({
           ))}
         </div>
         <div className="mb-4 flex justify-between pt-3">
-          <div className="flex items-center text-center text-lg font-semibold text-lightNavy">
+          <div className="flex items-center text-center text-lg font-semibold text-primaryLight">
             <a className="py-[10px] px-[15px]" href={linkFirstButton}>
               {ctaFirstButton}
             </a>

@@ -135,48 +135,48 @@ export const IMAGE_QUERY = `
 `;
 
 export const GET_ALL_PRODUCTS = gql`
-query {
-  products {
-    data {
-      attributes {
-        productTitle
-        slug
-        productDescription
-        productMainImage {
-          __typename
-          data {
-            id
-            attributes {
-              name
-              alternativeText
-              caption
-              width
-              height
-              formats
-              mime
-              url
-            }
+  query {
+    products {
+      data {
+        attributes {
+          productTitle
+          slug
+          productDescription
+          productMainImage {
             __typename
-          }
-        }
-        productImageCarousel {
-          __typename
-          data {
-            id
-            attributes {
-              name
-              alternativeText
-              caption
-              width
-              height
-              formats
-              mime
-              url
+            data {
+              id
+              attributes {
+                name
+                alternativeText
+                caption
+                width
+                height
+                formats
+                mime
+                url
+              }
+              __typename
             }
-            __typename
           }
-        }
-        seo {
+          productImageCarousel {
+            __typename
+            data {
+              id
+              attributes {
+                name
+                alternativeText
+                caption
+                width
+                height
+                formats
+                mime
+                url
+              }
+              __typename
+            }
+          }
+          seo {
             id
             __typename
             metaTitle
@@ -188,16 +188,39 @@ query {
               content
             }
           }
-        product_categories {
-          data {
-            attributes {
-              categoryName
+          product_categories {
+            data {
+              attributes {
+                categoryName
+              }
             }
           }
+          productSpecs
         }
-        productSpecs
       }
     }
   }
-}
+`;
+
+export const GET_COLORS_CONFIG = gql`
+  query GetColorConfig {
+    colorsConfig {
+      data {
+        attributes {
+          primary
+          primaryLight
+          primaryDark
+          secondary
+          secondaryLight
+          secondaryDark
+          white
+          black
+          background
+          gray
+          lightGray
+          darkGray
+        }
+      }
+    }
+  }
 `;
